@@ -1,0 +1,70 @@
+{
+  "config_hashes": {
+    "AutoETS": "cc7a3e32de51",
+    "AutoTheta": "ceb08ea550ea",
+    "LightGBM": "4a9603f2ca68",
+    "Prophet": "d1932f58332b",
+    "SeasonalMedian4": "ba0ef6cb207b",
+    "SeasonalNaive7": "6f298f7bf6b9",
+    "TimesFM3-log": "ed3174a851b6",
+    "TimesFM3-raw": "ef597392107a"
+  },
+  "created_at": "2026-09-01T06:50:41.539885+00:00",
+  "data_hash": "e82a4c91666582701d9851fd8b36a51cd51949d7d11e32b6ff2658849bce6681",
+  "entries": [
+    {
+      "expected_rows": 1944,
+      "model_variant": "AutoETS",
+      "task": "volume"
+    },
+    {
+      "expected_rows": 1944,
+      "model_variant": "AutoTheta",
+      "task": "volume"
+    },
+    {
+      "expected_rows": 1944,
+      "model_variant": "LightGBM",
+      "task": "volume"
+    },
+    {
+      "expected_rows": 1944,
+      "model_variant": "Prophet",
+      "task": "volume"
+    },
+    {
+      "expected_rows": 1944,
+      "model_variant": "SeasonalMedian4",
+      "task": "volume"
+    },
+    {
+      "expected_rows": 1944,
+      "model_variant": "SeasonalNaive7",
+      "task": "volume"
+    },
+    {
+      "expected_rows": 1944,
+      "model_variant": "TimesFM3-log",
+      "task": "volume"
+    },
+    {
+      "expected_rows": 1944,
+      "model_variant": "TimesFM3-raw",
+      "task": "volume"
+    }
+  ],
+  "estimation": "rolling",
+  "expected_rows": {
+    "AutoETS": 1944,
+    "AutoTheta": 1944,
+    "LightGBM": 1944,
+    "Prophet": 1944,
+    "SeasonalMedian4": 1944,
+    "SeasonalNaive7": 1944,
+    "TimesFM3-log": 1944,
+    "TimesFM3-raw": 1944
+  },
+  "run_id": "volume-main-44c6d78ac972",
+  "task": "volume",
+  "window": "main"
+}

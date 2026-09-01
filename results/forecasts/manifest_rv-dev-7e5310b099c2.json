@@ -1,0 +1,35 @@
+{
+  "config_hashes": {
+    "EWMA": "ee35588d777b",
+    "NaivePrev": "fdf63d2861e3",
+    "TimesFM3-raw": "48738fab285b"
+  },
+  "created_at": "2026-09-01T05:00:15.879433+00:00",
+  "data_hash": "5044c6eed3a865f7a1d37b06a7b9aad3b3eb5950cb24d13b9afeec5e9c0431ed",
+  "entries": [
+    {
+      "expected_rows": 15038,
+      "model_variant": "EWMA",
+      "task": "rv"
+    },
+    {
+      "expected_rows": 15038,
+      "model_variant": "NaivePrev",
+      "task": "rv"
+    },
+    {
+      "expected_rows": 15038,
+      "model_variant": "TimesFM3-raw",
+      "task": "rv"
+    }
+  ],
+  "estimation": "rolling",
+  "expected_rows": {
+    "EWMA": 15038,
+    "NaivePrev": 15038,
+    "TimesFM3-raw": 15038
+  },
+  "run_id": "rv-dev-7e5310b099c2",
+  "task": "rv",
+  "window": "dev"
+}

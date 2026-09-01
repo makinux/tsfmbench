@@ -1,0 +1,233 @@
+{
+  "config_hashes": {
+    "EWMA": "ee35588d777b",
+    "NaivePrev": "fdf63d2861e3",
+    "TimesFM3-raw": "48738fab285b"
+  },
+  "data_hash": "5044c6eed3a865f7a1d37b06a7b9aad3b3eb5950cb24d13b9afeec5e9c0431ed",
+  "models": {
+    "EWMA": {
+      "class": "EWMA",
+      "lam": 0.94,
+      "name": "EWMA",
+      "reference": false,
+      "requires_fit": false
+    },
+    "NaivePrev": {
+      "class": "NaivePrev",
+      "name": "NaivePrev",
+      "reference": false,
+      "requires_fit": false
+    },
+    "TimesFM3-raw": {
+      "ForecastConfig": {
+        "fix_quantile_crossing": false,
+        "force_flip_invariance": true,
+        "infer_is_positive": true,
+        "max_context": 1024,
+        "max_horizon": 1,
+        "normalize_inputs": false,
+        "per_core_batch_size": 8,
+        "return_backcast": false,
+        "use_continuous_quantile_head": false,
+        "window_size": 0
+      },
+      "backend_config": {
+        "cache_dir": null,
+        "checkpoint_path": "google/timesfm-3.0-pytorch",
+        "device": "cuda",
+        "force_download": false,
+        "input_patch_length": 32,
+        "input_transform": "identity",
+        "linear_detrending_threshold": 0.5,
+        "local_files_only": true,
+        "median_quantile_index": 4,
+        "output_patch_length": 64,
+        "per_core_batch_size": 8,
+        "quantiles": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9
+        ],
+        "residual_block_config": {
+          "activation": "relu",
+          "dropout": 0.0,
+          "hidden_dims": 1280,
+          "identity_skip": false,
+          "output_dims": 1280,
+          "prenorm": "none",
+          "use_bias": false
+        },
+        "revision": null,
+        "token": null,
+        "transformer_config": {
+          "num_layers": 20,
+          "transformer": {
+            "attention_norm": "rms",
+            "causal_attention": true,
+            "debug_no_masking": false,
+            "deterministic": true,
+            "feedforward_norm": "rms",
+            "ff_activation": "relu",
+            "hidden_dims": 1280,
+            "max_variates": 32,
+            "model_dims": 1280,
+            "num_heads": 16,
+            "paired_token_skip_second": false,
+            "qk_norm": "rms",
+            "training": true,
+            "use_bias": false,
+            "use_memory_efficient_attention": true,
+            "use_rope_seq": true,
+            "use_rope_var": false,
+            "use_sdpa": true,
+            "v_norm": "none"
+          },
+          "use_remat": true
+        },
+        "use_frozen_running_stats": false,
+        "use_iterative_cpm_revin": true,
+        "use_linear_detrending": true,
+        "use_sdpa": true,
+        "use_stitching": true,
+        "use_variate_attention": true,
+        "value_clip": 1e+20
+      },
+      "checkpoint": "google/timesfm-3.0-pytorch",
+      "context_lengths": {
+        "RV_ADA": 1024,
+        "RV_BTC": 1024,
+        "RV_DOGE": 1024,
+        "RV_ETH": 1024,
+        "RV_LINK": 1024,
+        "RV_LTC": 1024,
+        "RV_N225_GK": 490,
+        "RV_SOL": 1024,
+        "RV_XRP": 511
+      },
+      "device": "auto(cuda->cpu)",
+      "make_positive": false,
+      "model_variant": "TimesFM3-raw",
+      "per_core_batch_size": 8,
+      "quantiles": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "resolved_commit_hash": "900fcab43d1bfe71733a33b3fec61a41fce28a27",
+      "return_quantiles": true,
+      "revision": null
+    }
+  },
+  "run_id": "rv-dev-7e5310b099c2",
+  "task": "rv",
+  "task_config": {
+    "_source": "D:\\home\\TimesFM\\configs\\tasks\\rv.yaml",
+    "clean_start": "datetime.date(2026, 9, 1)",
+    "context_length": {
+      "default": 1024
+    },
+    "dev_end": "datetime.date(2024, 12, 31)",
+    "estimation_windows": {
+      "crypto": 1000,
+      "equity": 400,
+      "rv_crypto": 1000,
+      "rv_equity": 400
+    },
+    "horizons": [
+      {
+        "h": 1,
+        "name": "h1",
+        "probabilistic": true,
+        "step": 1,
+        "target": "next"
+      },
+      {
+        "h": 5,
+        "name": "h5_sum",
+        "probabilistic": true,
+        "step": 5,
+        "target": "sum"
+      },
+      {
+        "h": 22,
+        "name": "h22_sum",
+        "probabilistic": false,
+        "quantiles_written_not_evaluated": true,
+        "step": 22,
+        "target": "sum"
+      }
+    ],
+    "label": "V",
+    "origin_schedule": {
+      "frequency": "native"
+    },
+    "panel": "rv_daily",
+    "positive_target": true,
+    "primary_benchmark": "EWMA",
+    "refit_every": 5,
+    "series": [
+      "RV_BTC",
+      "RV_ETH",
+      "RV_SOL",
+      "RV_XRP",
+      "RV_ADA",
+      "RV_DOGE",
+      "RV_LTC",
+      "RV_LINK",
+      "RV_N225_GK"
+    ],
+    "sub_horizons": {
+      "h1": {
+        "h": 1,
+        "origin_step": 1,
+        "probabilistic": "full",
+        "target": "next"
+      },
+      "h22_sum": {
+        "h": 22,
+        "origin_step": 22,
+        "probabilistic": "point_only",
+        "quantiles_written_not_evaluated": true,
+        "target": "nonoverlapping_sum"
+      },
+      "h5_sum": {
+        "h": 5,
+        "origin_step": 5,
+        "probabilistic": "full",
+        "target": "nonoverlapping_sum"
+      }
+    },
+    "task": "rv",
+    "test_end": "datetime.date(2026, 8, 31)",
+    "test_start": "datetime.date(2025, 1, 2)",
+    "value_column": "rv",
+    "version": 1,
+    "windows": {
+      "clean": {
+        "end": null,
+        "start": "datetime.date(2026, 9, 1)"
+      },
+      "dev": {
+        "end": "datetime.date(2024, 12, 31)",
+        "start": null
+      },
+      "main": {
+        "end": "datetime.date(2026, 8, 31)",
+        "start": "datetime.date(2025, 1, 2)"
+      }
+    }
+  }
+}

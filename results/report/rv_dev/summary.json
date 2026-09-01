@@ -1,0 +1,1045 @@
+{
+  "schema_version": 1,
+  "task": "rv",
+  "window": "dev",
+  "run_id": "rv-dev-7e5310b099c2",
+  "claim_scope": "本ベンチマークが判定するのは「**TimesFM 3.0 の下記指定構成が、本パネルの実務ベースラインに、指定タスク・指定窓で勝つか**」のみである。TSFM（時系列基盤モデル）一般の優劣、および商用導入可否（重みは非商用ライセンス）には及ばない。",
+  "window_disclaimer": "開発窓 — 最終評価から除外、技術検証のみ。",
+  "primary_benchmark": "EWMA",
+  "primary_model": "TimesFM3-raw",
+  "primary_metric": "per-series QLIKE ratio vs EWMA",
+  "leaderboards": {
+    "h1": [
+      {
+        "model": "EWMA",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 8,
+        "fail_count": 1,
+        "n_used": 11567,
+        "fail_reasons": {
+          "insufficient_return_history": 1
+        },
+        "runtime_total_s": 123.06431339988194,
+        "runtime_per_origin_s": 0.06799133337010052
+      },
+      {
+        "model": "NaivePrev",
+        "ratio_median": 0.9463837325501112,
+        "ratio_mean": 0.981352794758074,
+        "win_rate": 0.625,
+        "series_used": 8,
+        "fail_count": 0,
+        "n_used": 11568,
+        "fail_reasons": {},
+        "runtime_total_s": 67.52831770027115,
+        "runtime_per_origin_s": 0.03730846281782936
+      },
+      {
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.8339400939095805,
+        "ratio_mean": 0.841339080028789,
+        "win_rate": 1.0,
+        "series_used": 8,
+        "fail_count": 60,
+        "n_used": 11508,
+        "fail_reasons": {
+          "nonpositive_forecast": 60
+        },
+        "runtime_total_s": 406.28096679990995,
+        "runtime_per_origin_s": 0.22446462254138672
+      }
+    ],
+    "h5": [
+      {
+        "model": "EWMA",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 8,
+        "fail_count": 103,
+        "n_used": 2208,
+        "fail_reasons": {
+          "missing_actual": 102,
+          "insufficient_return_history": 1
+        },
+        "runtime_total_s": 83.75565960021049,
+        "runtime_per_origin_s": 0.0717086126714131
+      },
+      {
+        "model": "NaivePrev",
+        "ratio_median": 0.9597033980327208,
+        "ratio_mean": 1.0009269176078412,
+        "win_rate": 0.625,
+        "series_used": 8,
+        "fail_count": 109,
+        "n_used": 2202,
+        "fail_reasons": {
+          "missing_actual": 101,
+          "insufficient_history": 8
+        },
+        "runtime_total_s": 46.881676600372884,
+        "runtime_per_origin_s": 0.040138421746894595
+      },
+      {
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.940065653185806,
+        "ratio_mean": 0.9875234379158627,
+        "win_rate": 0.75,
+        "series_used": 8,
+        "fail_count": 112,
+        "n_used": 2199,
+        "fail_reasons": {
+          "missing_actual": 101,
+          "nonpositive_forecast": 11
+        },
+        "runtime_total_s": 282.70123266244264,
+        "runtime_per_origin_s": 0.24203872659455705
+      }
+    ],
+    "h22": [
+      {
+        "model": "EWMA",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 8,
+        "fail_count": 105,
+        "n_used": 418,
+        "fail_reasons": {
+          "missing_actual": 104,
+          "insufficient_return_history": 1
+        },
+        "runtime_total_s": 31.39199840009678,
+        "runtime_per_origin_s": 0.07546153461561726
+      },
+      {
+        "model": "NaivePrev",
+        "ratio_median": 0.8966467442181361,
+        "ratio_mean": 0.8563301274759408,
+        "win_rate": 0.625,
+        "series_used": 8,
+        "fail_count": 109,
+        "n_used": 414,
+        "fail_reasons": {
+          "missing_actual": 101,
+          "insufficient_history": 8
+        },
+        "runtime_total_s": 17.297486299779848,
+        "runtime_per_origin_s": 0.04158049591293233
+      },
+      {
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.9792002219114179,
+        "ratio_mean": 1.0185611601241127,
+        "win_rate": 0.5,
+        "series_used": 8,
+        "fail_count": 106,
+        "n_used": 417,
+        "fail_reasons": {
+          "missing_actual": 102,
+          "nonpositive_forecast": 4
+        },
+        "runtime_total_s": 102.63421308745455,
+        "runtime_per_origin_s": 0.2467168583833042
+      }
+    ]
+  },
+  "primary_tests": [
+    {
+      "task": "rv",
+      "h": 1,
+      "model": "TimesFM3-raw",
+      "benchmark": "EWMA",
+      "status": "ok",
+      "series_count": 8,
+      "mean_dbar": -0.06465603310221313,
+      "sign_stat": 0.0,
+      "sign_pvalue": 0.0078125,
+      "sign_n": 8,
+      "bootstrap_estimate": -0.06465603310221313,
+      "bootstrap_ci_low": -0.08300930759619715,
+      "bootstrap_ci_high": -0.0437913519605549,
+      "bootstrap_pvalue": 0.0009995002498750624,
+      "standardized_effect": -2.1252979528731806,
+      "mde_sd": 0.06588684537030494,
+      "mde_n_origins": 1810,
+      "power_note": "MDE 以上",
+      "holm_pvalue": 0.0234375
+    },
+    {
+      "task": "rv",
+      "h": 5,
+      "model": "TimesFM3-raw",
+      "benchmark": "EWMA",
+      "status": "ok",
+      "series_count": 8,
+      "mean_dbar": -0.005682917702115412,
+      "sign_stat": 2.0,
+      "sign_pvalue": 0.2890625,
+      "sign_n": 8,
+      "bootstrap_estimate": -0.005682917702115412,
+      "bootstrap_ci_low": -0.026403504954151606,
+      "bootstrap_ci_high": 0.02104572939601761,
+      "bootstrap_pvalue": 0.6296851574212894,
+      "standardized_effect": -0.15059235503694676,
+      "mde_sd": 0.08412566536564968,
+      "mde_n_origins": 1111,
+      "power_note": "MDE 以上",
+      "holm_pvalue": 0.578125
+    },
+    {
+      "task": "rv",
+      "h": 22,
+      "model": "TimesFM3-raw",
+      "benchmark": "EWMA",
+      "status": "ok",
+      "series_count": 8,
+      "mean_dbar": -0.005447751765193276,
+      "sign_stat": 4.0,
+      "sign_pvalue": 1.0,
+      "sign_n": 8,
+      "bootstrap_estimate": -0.005447751765193276,
+      "bootstrap_ci_low": -0.07767945569207889,
+      "bootstrap_ci_high": 0.07529562081748974,
+      "bootstrap_pvalue": 0.8905547226386806,
+      "standardized_effect": -0.047988868876727465,
+      "mde_sd": 0.15374625892774824,
+      "mde_n_origins": 334,
+      "power_note": "検出力不足 — 判別不能",
+      "holm_pvalue": 1.0
+    }
+  ],
+  "mcs": {
+    "h1": {
+      "status": "ok",
+      "origin_count": 1810,
+      "common_rows": 11507,
+      "included": [
+        "TimesFM3-raw"
+      ],
+      "excluded": [
+        "EWMA",
+        "NaivePrev"
+      ],
+      "pvalues": {
+        "EWMA": 0.0,
+        "NaivePrev": 0.0,
+        "TimesFM3-raw": 1.0
+      }
+    },
+    "h5": {
+      "status": "ok",
+      "origin_count": 1114,
+      "common_rows": 2192,
+      "included": [
+        "EWMA",
+        "NaivePrev",
+        "TimesFM3-raw"
+      ],
+      "excluded": [],
+      "pvalues": {
+        "NaivePrev": 0.857,
+        "TimesFM3-raw": 0.943,
+        "EWMA": 1.0
+      }
+    },
+    "h22": {
+      "status": "ok",
+      "origin_count": 336,
+      "common_rows": 412,
+      "included": [
+        "NaivePrev"
+      ],
+      "excluded": [
+        "EWMA",
+        "TimesFM3-raw"
+      ],
+      "pvalues": {
+        "EWMA": 0.002,
+        "TimesFM3-raw": 0.017,
+        "NaivePrev": 1.0
+      }
+    }
+  },
+  "calibration": {
+    "h1": {
+      "coverage": [
+        {
+          "model": "EWMA",
+          "overall": 0.7998377793799567,
+          "low": 0.8164368748310354,
+          "middle": 0.8166576527852893,
+          "high": 0.7664233576642335,
+          "n_used": 11096,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "NaivePrev",
+          "overall": 0.7864357864357865,
+          "low": 0.7943722943722944,
+          "middle": 0.7881493506493507,
+          "high": 0.7767857142857143,
+          "n_used": 11088,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "TimesFM3-raw",
+          "overall": 0.7990962808481057,
+          "low": 0.8104796663190824,
+          "middle": 0.8044838373305526,
+          "high": 0.7823253388946819,
+          "n_used": 11508,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        }
+      ],
+      "wql": [
+        {
+          "model": "EWMA",
+          "wql": 0.5367386220749827,
+          "n_used": 11096
+        },
+        {
+          "model": "NaivePrev",
+          "wql": 0.5305876997403918,
+          "n_used": 11088
+        },
+        {
+          "model": "TimesFM3-raw",
+          "wql": 0.4456354949192736,
+          "n_used": 11508
+        }
+      ],
+      "var_tests": [
+        {
+          "model": "EWMA",
+          "unique_id": "RV_BTC",
+          "n": 1749,
+          "violations": 191,
+          "kupiec_pvalue": 0.20536668828896756,
+          "christoffersen_ind_pvalue": 6.476219148608591e-29,
+          "christoffersen_cc_pvalue": 4.094167384392978e-28,
+          "reason": null
+        },
+        {
+          "model": "EWMA",
+          "unique_id": "RV_ETH",
+          "n": 1748,
+          "violations": 179,
+          "kupiec_pvalue": 0.7386242980959317,
+          "christoffersen_ind_pvalue": 1.1964149243018537e-35,
+          "christoffersen_cc_pvalue": 1.7787735536063452e-34,
+          "reason": null
+        },
+        {
+          "model": "EWMA",
+          "unique_id": "RV_N225_GK",
+          "n": 431,
+          "violations": 71,
+          "kupiec_pvalue": 3.4779510732774764e-05,
+          "christoffersen_ind_pvalue": 2.8016300592527527e-12,
+          "christoffersen_cc_pvalue": 4.753637427016282e-15,
+          "reason": null
+        },
+        {
+          "model": "NaivePrev",
+          "unique_id": "RV_BTC",
+          "n": 1748,
+          "violations": 200,
+          "kupiec_pvalue": 0.04898709253005108,
+          "christoffersen_ind_pvalue": 2.0321736396607403e-05,
+          "christoffersen_cc_pvalue": 1.6414455478697357e-05,
+          "reason": null
+        },
+        {
+          "model": "NaivePrev",
+          "unique_id": "RV_ETH",
+          "n": 1747,
+          "violations": 205,
+          "kupiec_pvalue": 0.018343899189019065,
+          "christoffersen_ind_pvalue": 0.00010511097719713427,
+          "christoffersen_cc_pvalue": 3.3538791346229976e-05,
+          "reason": null
+        },
+        {
+          "model": "NaivePrev",
+          "unique_id": "RV_N225_GK",
+          "n": 430,
+          "violations": 48,
+          "kupiec_pvalue": 0.4292080595646248,
+          "christoffersen_ind_pvalue": 0.000574218501240398,
+          "christoffersen_cc_pvalue": 0.0019472090579198836,
+          "reason": null
+        },
+        {
+          "model": "TimesFM3-raw",
+          "unique_id": "RV_BTC",
+          "n": 1791,
+          "violations": 163,
+          "kupiec_pvalue": 0.198551352593402,
+          "christoffersen_ind_pvalue": 0.5922065646338288,
+          "christoffersen_cc_pvalue": 0.379100162152804,
+          "reason": null
+        },
+        {
+          "model": "TimesFM3-raw",
+          "unique_id": "RV_ETH",
+          "n": 1803,
+          "violations": 178,
+          "kupiec_pvalue": 0.8564478064195113,
+          "christoffersen_ind_pvalue": 0.5014676620984955,
+          "christoffersen_cc_pvalue": 0.7848391304316333,
+          "reason": null
+        },
+        {
+          "model": "TimesFM3-raw",
+          "unique_id": "RV_N225_GK",
+          "n": 488,
+          "violations": 51,
+          "kupiec_pvalue": 0.7415590277095514,
+          "christoffersen_ind_pvalue": 0.22516184993969063,
+          "christoffersen_cc_pvalue": 0.4538613861007863,
+          "reason": null
+        }
+      ]
+    },
+    "h5": {
+      "coverage": [
+        {
+          "model": "EWMA",
+          "overall": 0.8301354401805869,
+          "low": 0.8697123519458545,
+          "middle": 0.8762711864406779,
+          "high": 0.7445008460236887,
+          "n_used": 1772,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "NaivePrev",
+          "overall": 0.7993197278911565,
+          "low": 0.8758503401360545,
+          "middle": 0.8503401360544217,
+          "high": 0.6717687074829932,
+          "n_used": 1764,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "TimesFM3-raw",
+          "overall": 0.8667576170986813,
+          "low": 0.9427012278308322,
+          "middle": 0.8894952251023193,
+          "high": 0.7680763983628922,
+          "n_used": 2199,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        }
+      ],
+      "wql": [
+        {
+          "model": "EWMA",
+          "wql": 0.47252174560903715,
+          "n_used": 1772
+        },
+        {
+          "model": "NaivePrev",
+          "wql": 0.4875161584265344,
+          "n_used": 1764
+        },
+        {
+          "model": "TimesFM3-raw",
+          "wql": 0.42135920038031005,
+          "n_used": 2199
+        }
+      ],
+      "var_tests": []
+    }
+  },
+  "task_p": null,
+  "diagnostics": {
+    "half_split": [
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "EWMA",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "NaivePrev",
+        "win_rate": 0.8571428571428571,
+        "ratio_median": 0.9066593268999361,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 0.8571428571428571,
+        "ratio_median": 0.821498993636441,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "EWMA",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 8
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "NaivePrev",
+        "win_rate": 0.5,
+        "ratio_median": 0.9833400589283547,
+        "series_used": 8
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 1.0,
+        "ratio_median": 0.8523666973697643,
+        "series_used": 8
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "EWMA",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "NaivePrev",
+        "win_rate": 0.5714285714285714,
+        "ratio_median": 0.9187375352447876,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 0.5714285714285714,
+        "ratio_median": 0.9787975067486531,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "EWMA",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 8
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "NaivePrev",
+        "win_rate": 0.5,
+        "ratio_median": 1.004363548964952,
+        "series_used": 8
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 0.625,
+        "ratio_median": 0.9389579200558551,
+        "series_used": 8
+      },
+      {
+        "h": 22,
+        "period": "first_half",
+        "model": "EWMA",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 22,
+        "period": "first_half",
+        "model": "NaivePrev",
+        "win_rate": 0.7142857142857143,
+        "ratio_median": 0.7925232609592157,
+        "series_used": 7
+      },
+      {
+        "h": 22,
+        "period": "first_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 0.7142857142857143,
+        "ratio_median": 0.9127466831297173,
+        "series_used": 7
+      },
+      {
+        "h": 22,
+        "period": "second_half",
+        "model": "EWMA",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 8
+      },
+      {
+        "h": 22,
+        "period": "second_half",
+        "model": "NaivePrev",
+        "win_rate": 0.625,
+        "ratio_median": 0.9740969444306373,
+        "series_used": 8
+      },
+      {
+        "h": 22,
+        "period": "second_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 0.375,
+        "ratio_median": 1.1273397026191054,
+        "series_used": 8
+      }
+    ],
+    "group_breakdown": [
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "EWMA",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "NaivePrev",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "TimesFM3-raw",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "EWMA",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "NaivePrev",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "TimesFM3-raw",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "EWMA",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "NaivePrev",
+        "ratio_median": 1.2931191770854658,
+        "ratio_mean": 1.2931191770854658,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.8689871832405635,
+        "ratio_mean": 0.8689871832405635,
+        "win_rate": 1.0,
+        "series_used": 1
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "EWMA",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "NaivePrev",
+        "ratio_median": 0.9332749037694273,
+        "ratio_mean": 0.936814740139875,
+        "win_rate": 0.7142857142857143,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.8277012000385875,
+        "ratio_mean": 0.8373893509985353,
+        "win_rate": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "EWMA",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "NaivePrev",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "TimesFM3-raw",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "EWMA",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "NaivePrev",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "TimesFM3-raw",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "EWMA",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "NaivePrev",
+        "ratio_median": 0.8844796935247695,
+        "ratio_mean": 0.8844796935247695,
+        "win_rate": 1.0,
+        "series_used": 1
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.933368278579702,
+        "ratio_mean": 0.933368278579702,
+        "win_rate": 1.0,
+        "series_used": 1
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "EWMA",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "NaivePrev",
+        "ratio_median": 0.9893879716412592,
+        "ratio_mean": 1.0175622353339941,
+        "win_rate": 0.5714285714285714,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.9419604832835554,
+        "ratio_mean": 0.9952598892496,
+        "win_rate": 0.7142857142857143,
+        "series_used": 7
+      },
+      {
+        "h": 22,
+        "group": "fx",
+        "model": "EWMA",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 22,
+        "group": "fx",
+        "model": "NaivePrev",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 22,
+        "group": "fx",
+        "model": "TimesFM3-raw",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 22,
+        "group": "rates",
+        "model": "EWMA",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 22,
+        "group": "rates",
+        "model": "NaivePrev",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 22,
+        "group": "rates",
+        "model": "TimesFM3-raw",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 22,
+        "group": "equity",
+        "model": "EWMA",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 22,
+        "group": "equity",
+        "model": "NaivePrev",
+        "ratio_median": 1.003307288031623,
+        "ratio_mean": 1.003307288031623,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 22,
+        "group": "equity",
+        "model": "TimesFM3-raw",
+        "ratio_median": 1.168128801486928,
+        "ratio_mean": 1.168128801486928,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 22,
+        "group": "crypto",
+        "model": "EWMA",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 22,
+        "group": "crypto",
+        "model": "NaivePrev",
+        "ratio_median": 0.8225151928264463,
+        "ratio_mean": 0.8353333902537006,
+        "win_rate": 0.7142857142857143,
+        "series_used": 7
+      },
+      {
+        "h": 22,
+        "group": "crypto",
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.9093844555795678,
+        "ratio_mean": 0.9971943542151391,
+        "win_rate": 0.5714285714285714,
+        "series_used": 7
+      }
+    ],
+    "special_series": [
+      {
+        "h": 1,
+        "unique_id": "RV_XRP",
+        "model": "EWMA",
+        "ratio": 1.0
+      },
+      {
+        "h": 1,
+        "unique_id": "RV_XRP",
+        "model": "NaivePrev",
+        "ratio": 0.8467748303593012
+      },
+      {
+        "h": 1,
+        "unique_id": "RV_XRP",
+        "model": "TimesFM3-raw",
+        "ratio": 0.7945465192948987
+      },
+      {
+        "h": 5,
+        "unique_id": "RV_XRP",
+        "model": "EWMA",
+        "ratio": 1.0
+      },
+      {
+        "h": 5,
+        "unique_id": "RV_XRP",
+        "model": "NaivePrev",
+        "ratio": 0.6992151570565504
+      },
+      {
+        "h": 5,
+        "unique_id": "RV_XRP",
+        "model": "TimesFM3-raw",
+        "ratio": 0.7533472304732096
+      },
+      {
+        "h": 22,
+        "unique_id": "RV_XRP",
+        "model": "EWMA",
+        "ratio": 1.0
+      },
+      {
+        "h": 22,
+        "unique_id": "RV_XRP",
+        "model": "NaivePrev",
+        "ratio": 0.742149214589756
+      },
+      {
+        "h": 22,
+        "unique_id": "RV_XRP",
+        "model": "TimesFM3-raw",
+        "ratio": 0.7866184929356698
+      }
+    ]
+  },
+  "reference_models": [],
+  "manifest": {
+    "status": "ok",
+    "expected": {
+      "EWMA": 15038,
+      "NaivePrev": 15038,
+      "TimesFM3-raw": 15038
+    },
+    "actual": {
+      "EWMA": 15038,
+      "NaivePrev": 15038,
+      "TimesFM3-raw": 15038
+    },
+    "rows": [
+      {
+        "model": "EWMA",
+        "expected_rows": 15038,
+        "actual_rows": 15038,
+        "match": true
+      },
+      {
+        "model": "NaivePrev",
+        "expected_rows": 15038,
+        "actual_rows": 15038,
+        "match": true
+      },
+      {
+        "model": "TimesFM3-raw",
+        "expected_rows": 15038,
+        "actual_rows": 15038,
+        "match": true
+      }
+    ]
+  },
+  "plots": [
+    "plots/calibration.png",
+    "plots/qlike_ratio_distribution.png",
+    "plots/primary_loss_difference.png"
+  ]
+}

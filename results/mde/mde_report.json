@@ -1,0 +1,88 @@
+{
+  "alpha": 0.05,
+  "power": 0.8,
+  "units": "standard deviations of the paired loss difference",
+  "qlike_reference_assumption": "SD(loss difference) / mean(benchmark QLIKE) = 1",
+  "rows": [
+    {
+      "task": "price",
+      "h_days": 1,
+      "step_days": 5,
+      "n_origins": 122,
+      "design_effect": 1.0,
+      "mde_sd": 0.2557060536050732,
+      "reference_qlike_ratio": 1.2557060536050733,
+      "source": "price.yaml: 2025-01-02..2026-08-31"
+    },
+    {
+      "task": "price",
+      "h_days": 5,
+      "step_days": 5,
+      "n_origins": 121,
+      "design_effect": 1.0,
+      "mde_sd": 0.25677793116596104,
+      "reference_qlike_ratio": 1.256777931165961,
+      "source": "price.yaml: 2025-01-02..2026-08-31"
+    },
+    {
+      "task": "price",
+      "h_days": 20,
+      "step_days": 5,
+      "n_origins": 118,
+      "design_effect": 4.0,
+      "mde_sd": 0.5344956808671945,
+      "reference_qlike_ratio": 1.5344956808671943,
+      "source": "price.yaml: 2025-01-02..2026-08-31"
+    },
+    {
+      "task": "rv",
+      "h_days": 1,
+      "step_days": 1,
+      "n_origins": 607,
+      "design_effect": 1.0,
+      "mde_sd": 0.1138961299260953,
+      "reference_qlike_ratio": 1.1138961299260952,
+      "source": "rv.yaml: 2025-01-02..2026-08-31"
+    },
+    {
+      "task": "rv",
+      "h_days": 5,
+      "step_days": 5,
+      "n_origins": 121,
+      "design_effect": 1.0,
+      "mde_sd": 0.25677793116596104,
+      "reference_qlike_ratio": 1.256777931165961,
+      "source": "rv.yaml: 2025-01-02..2026-08-31"
+    },
+    {
+      "task": "rv",
+      "h_days": 22,
+      "step_days": 22,
+      "n_origins": 27,
+      "design_effect": 1.0,
+      "mde_sd": 0.5602596758419617,
+      "reference_qlike_ratio": 1.5602596758419618,
+      "source": "rv.yaml: 2025-01-02..2026-08-31"
+    },
+    {
+      "task": "volume",
+      "h_days": 1,
+      "step_days": 5,
+      "n_origins": 122,
+      "design_effect": 1.0,
+      "mde_sd": 0.2557060536050732,
+      "reference_qlike_ratio": 1.2557060536050733,
+      "source": "volume.yaml: 2025-01-02..2026-08-31"
+    },
+    {
+      "task": "volume",
+      "h_days": 5,
+      "step_days": 5,
+      "n_origins": 121,
+      "design_effect": 1.0,
+      "mde_sd": 0.25677793116596104,
+      "reference_qlike_ratio": 1.256777931165961,
+      "source": "volume.yaml: 2025-01-02..2026-08-31"
+    }
+  ]
+}

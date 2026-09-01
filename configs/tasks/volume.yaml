@@ -1,0 +1,28 @@
+version: 1
+task: volume
+label: U
+dev_end: 2024-12-31
+test_start: 2025-01-02
+test_end: 2026-08-31
+clean_start: 2026-09-01
+panel: series
+value_column: y
+series:
+  - VOL_Coinbase_BTC-USD_base
+  - VOL_Coinbase_ETH-USD_base
+  - VOL_Coinbase_SOL-USD_base
+  - VOL_Coinbase_XRP-USD_base
+  - VOL_Coinbase_ADA-USD_base
+  - VOL_Coinbase_DOGE-USD_base
+  - VOL_Coinbase_LTC-USD_base
+  - VOL_Coinbase_LINK-USD_base
+transform: log1p
+horizons: [1, 5]
+origin_schedule: {frequency: native, step: 5}
+windows:
+  dev: {start: null, end: 2024-12-31}
+  main: {start: 2025-01-02, end: 2026-08-31}
+  clean: {start: 2026-09-01, end: null}
+primary_benchmark: SeasonalNaive7
+estimation_windows: {crypto: 1000, volume: 1000}
+context_length: {default: 2048}

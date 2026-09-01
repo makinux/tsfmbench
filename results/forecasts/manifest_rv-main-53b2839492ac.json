@@ -1,0 +1,70 @@
+{
+  "config_hashes": {
+    "DVOL": "d752767d268e",
+    "EWMA": "ee35588d777b",
+    "GARCH": "db9447b3d20a",
+    "GJR-GARCH": "ee13caeb71e7",
+    "HAR-RV": "aad0d0592ecd",
+    "LightGBM": "dc516209aeaa",
+    "NaivePrev": "fdf63d2861e3",
+    "TimesFM3-raw": "48738fab285b"
+  },
+  "created_at": "2026-09-01T05:13:41.496947+00:00",
+  "data_hash": "5044c6eed3a865f7a1d37b06a7b9aad3b3eb5950cb24d13b9afeec5e9c0431ed",
+  "entries": [
+    {
+      "expected_rows": 1499,
+      "model_variant": "DVOL",
+      "task": "rv"
+    },
+    {
+      "expected_rows": 6482,
+      "model_variant": "EWMA",
+      "task": "rv"
+    },
+    {
+      "expected_rows": 6482,
+      "model_variant": "GARCH",
+      "task": "rv"
+    },
+    {
+      "expected_rows": 501,
+      "model_variant": "GJR-GARCH",
+      "task": "rv"
+    },
+    {
+      "expected_rows": 6482,
+      "model_variant": "HAR-RV",
+      "task": "rv"
+    },
+    {
+      "expected_rows": 6482,
+      "model_variant": "LightGBM",
+      "task": "rv"
+    },
+    {
+      "expected_rows": 6482,
+      "model_variant": "NaivePrev",
+      "task": "rv"
+    },
+    {
+      "expected_rows": 6482,
+      "model_variant": "TimesFM3-raw",
+      "task": "rv"
+    }
+  ],
+  "estimation": "rolling",
+  "expected_rows": {
+    "DVOL": 1499,
+    "EWMA": 6482,
+    "GARCH": 6482,
+    "GJR-GARCH": 501,
+    "HAR-RV": 6482,
+    "LightGBM": 6482,
+    "NaivePrev": 6482,
+    "TimesFM3-raw": 6482
+  },
+  "run_id": "rv-main-53b2839492ac",
+  "task": "rv",
+  "window": "main"
+}

@@ -1,0 +1,58 @@
+version: 1
+end: "2026-08-31T23:55:00Z"
+
+coinbase:
+  base_url: "https://api.exchange.coinbase.com"
+  granularities: [300, 86400]
+  rv_start: "2020-01-01"
+  products:
+    - product: BTC-USD
+      listing_date: "2015-07-20"
+      notes: ""
+    - product: ETH-USD
+      listing_date: "2016-05-18"
+      notes: ""
+    - product: SOL-USD
+      listing_date: "2021-06-17"
+      notes: ""
+    - product: XRP-USD
+      listing_date: "2023-08-01"
+      notes: "Coinbase re-listed XRP in 2023-08; pre-relisting history is unavailable."
+    - product: ADA-USD
+      listing_date: "2021-03-16"
+      notes: ""
+    - product: DOGE-USD
+      listing_date: "2021-06-03"
+      notes: ""
+    - product: LTC-USD
+      listing_date: "2016-08-17"
+      notes: ""
+    - product: LINK-USD
+      listing_date: "2019-06-26"
+      notes: ""
+
+ecb:
+  url: "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.zip"
+  currencies: [USD, JPY, GBP, CHF, AUD, CNY, KRW, MXN]
+
+mof:
+  history_url: "https://www.mof.go.jp/jgbs/reference/interest_rate/data/jgbcm_all.csv"
+  current_url: "https://www.mof.go.jp/jgbs/reference/interest_rate/jgbcm.csv"
+  first_date: "1974-09-24"
+  maturities: [2, 5, 10, 20, 30, 40]
+
+nikkei:
+  url: "https://indexes.nikkei.co.jp/nkave/historical/nikkei_stock_average_daily_jp.csv"
+  license_note: "Nikkei raw history is no-redistribution data; do not commit or redistribute."
+
+deribit:
+  url: "https://www.deribit.com/api/v2/public/get_volatility_index_data"
+  currencies: [BTC, ETH]
+  start: "2022-01-01"
+
+audit:
+  random_sample_rows: 20
+  random_seed: 42
+  max_rv_missing_rate: 0.05
+  require_no_grid_gaps: true
+  require_no_zero_ecb: true

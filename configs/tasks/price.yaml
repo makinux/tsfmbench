@@ -1,0 +1,49 @@
+version: 1
+task: price
+label: P
+dev_end: 2024-12-31
+test_start: 2025-01-02
+test_end: 2026-08-31
+clean_start: 2026-09-01
+panel: series
+value_column: y
+series:
+  - EURUSD
+  - EURJPY
+  - EURGBP
+  - EURCHF
+  - EURAUD
+  - EURCNY
+  - EURKRW
+  - EURMXN
+  - JGB_2Y
+  - JGB_5Y
+  - JGB_10Y
+  - JGB_20Y
+  - JGB_30Y
+  - JGB_40Y
+  - N225
+  - BTC-USD
+  - ETH-USD
+  - SOL-USD
+  - XRP-USD
+  - ADA-USD
+  - DOGE-USD
+  - LTC-USD
+  - LINK-USD
+horizons: [1, 5, 20]
+origin_schedule: {frequency: native, step: 5}
+windows:
+  dev: {start: null, end: 2024-12-31}
+  main: {start: 2025-01-02, end: 2026-08-31}
+  clean: {start: 2026-09-01, end: null}
+primary_benchmark: RW
+estimation_windows: {crypto: 1000, equity: 400, fx: 1250, rates: 1250}
+context_length: {default: 2048}
+series_metadata:
+  JGB_2Y: {unit: bp_diff}
+  JGB_5Y: {unit: bp_diff}
+  JGB_10Y: {unit: bp_diff}
+  JGB_20Y: {unit: bp_diff}
+  JGB_30Y: {unit: bp_diff}
+  JGB_40Y: {unit: bp_diff}

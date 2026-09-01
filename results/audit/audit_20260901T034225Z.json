@@ -1,0 +1,864 @@
+{
+  "created_at": "2026-09-01T03:42:25.646142+00:00",
+  "passed": false,
+  "violation_count": 13,
+  "audits": [
+    {
+      "name": "utc_grid:BTC-USD_300",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "missing_utc_grid",
+          "series": "BTC-USD_300",
+          "count": 356,
+          "sample_epoch": [
+            1580403600,
+            1580403900,
+            1580404200,
+            1580404500,
+            1580404800,
+            1580405100,
+            1580405400,
+            1580405700,
+            1580406000,
+            1580406300,
+            1580406600,
+            1580406900,
+            1580407200,
+            1580407500,
+            1580407800,
+            1580408100,
+            1580408400,
+            1580408700,
+            1580409000,
+            1580409300
+          ]
+        }
+      ],
+      "metrics": {
+        "expected_count": 701280,
+        "actual_count": 700924,
+        "missing_count": 356,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:BTC-USD_300",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 700924,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:BTC-USD_86400",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "expected_count": 4061,
+        "actual_count": 4061,
+        "missing_count": 0,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:BTC-USD_86400",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 4061,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:ETH-USD_300",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "missing_utc_grid",
+          "series": "ETH-USD_300",
+          "count": 363,
+          "sample_epoch": [
+            1580403600,
+            1580403900,
+            1580404200,
+            1580404500,
+            1580404800,
+            1580405100,
+            1580405400,
+            1580405700,
+            1580406000,
+            1580406300,
+            1580406600,
+            1580406900,
+            1580407200,
+            1580407500,
+            1580407800,
+            1580408100,
+            1580408400,
+            1580408700,
+            1580409000,
+            1580409300
+          ]
+        }
+      ],
+      "metrics": {
+        "expected_count": 701280,
+        "actual_count": 700917,
+        "missing_count": 363,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:ETH-USD_300",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 700917,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:ETH-USD_86400",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "missing_utc_grid",
+          "series": "ETH-USD_86400",
+          "count": 2,
+          "sample_epoch": [
+            1463788800,
+            1463875200
+          ]
+        }
+      ],
+      "metrics": {
+        "expected_count": 3758,
+        "actual_count": 3756,
+        "missing_count": 2,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:ETH-USD_86400",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 3756,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:SOL-USD_300",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "missing_utc_grid",
+          "series": "SOL-USD_300",
+          "count": 467,
+          "sample_epoch": [
+            1623888000,
+            1623888300,
+            1623888600,
+            1623888900,
+            1623889200,
+            1623889500,
+            1623889800,
+            1623890100,
+            1623890400,
+            1623890700,
+            1623891000,
+            1623891300,
+            1623891600,
+            1623891900,
+            1623892200,
+            1623892500,
+            1623892800,
+            1623893100,
+            1623893400,
+            1623893700
+          ]
+        }
+      ],
+      "metrics": {
+        "expected_count": 547776,
+        "actual_count": 547309,
+        "missing_count": 467,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:SOL-USD_300",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 547309,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:SOL-USD_86400",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "expected_count": 1902,
+        "actual_count": 1902,
+        "missing_count": 0,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:SOL-USD_86400",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 1902,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:XRP-USD_300",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "missing_utc_grid",
+          "series": "XRP-USD_300",
+          "count": 194,
+          "sample_epoch": [
+            1697649600,
+            1697649900,
+            1707514800,
+            1707515100,
+            1707515400,
+            1707515700,
+            1717193700,
+            1717194000,
+            1717194300,
+            1717194600,
+            1717194900,
+            1717195200,
+            1717195500,
+            1717195800,
+            1717196100,
+            1717196400,
+            1717196700,
+            1717197000,
+            1729959000,
+            1729959300
+          ]
+        }
+      ],
+      "metrics": {
+        "expected_count": 324576,
+        "actual_count": 324382,
+        "missing_count": 194,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:XRP-USD_300",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 324382,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:XRP-USD_86400",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "expected_count": 1127,
+        "actual_count": 1127,
+        "missing_count": 0,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:XRP-USD_86400",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 1127,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:ADA-USD_300",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "missing_utc_grid",
+          "series": "ADA-USD_300",
+          "count": 1092,
+          "sample_epoch": [
+            1615852800,
+            1615853100,
+            1615853400,
+            1615853700,
+            1615854000,
+            1615854300,
+            1615854600,
+            1615854900,
+            1615855200,
+            1615855500,
+            1615855800,
+            1615856100,
+            1615856400,
+            1615856700,
+            1615857000,
+            1615857300,
+            1615857600,
+            1615857900,
+            1615858200,
+            1615858500
+          ]
+        }
+      ],
+      "metrics": {
+        "expected_count": 574560,
+        "actual_count": 573468,
+        "missing_count": 1092,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:ADA-USD_300",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 573468,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:ADA-USD_86400",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "missing_utc_grid",
+          "series": "ADA-USD_86400",
+          "count": 2,
+          "sample_epoch": [
+            1615852800,
+            1615939200
+          ]
+        }
+      ],
+      "metrics": {
+        "expected_count": 1995,
+        "actual_count": 1993,
+        "missing_count": 2,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:ADA-USD_86400",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 1993,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:DOGE-USD_300",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "missing_utc_grid",
+          "series": "DOGE-USD_300",
+          "count": 467,
+          "sample_epoch": [
+            1622678400,
+            1622678700,
+            1622679000,
+            1622679300,
+            1622679600,
+            1622679900,
+            1622680200,
+            1622680500,
+            1622680800,
+            1622681100,
+            1622681400,
+            1622681700,
+            1622682000,
+            1622682300,
+            1622682600,
+            1622682900,
+            1622683200,
+            1622683500,
+            1622683800,
+            1622684100
+          ]
+        }
+      ],
+      "metrics": {
+        "expected_count": 551808,
+        "actual_count": 551341,
+        "missing_count": 467,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:DOGE-USD_300",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 551341,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:DOGE-USD_86400",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "expected_count": 1916,
+        "actual_count": 1916,
+        "missing_count": 0,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:DOGE-USD_86400",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 1916,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:LTC-USD_300",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "missing_utc_grid",
+          "series": "LTC-USD_300",
+          "count": 468,
+          "sample_epoch": [
+            1577865600,
+            1577872800,
+            1577875200,
+            1577957100,
+            1577958600,
+            1577965800,
+            1577967900,
+            1578132600,
+            1578138000,
+            1578210900,
+            1578224100,
+            1578904800,
+            1578908100,
+            1579512300,
+            1579590300,
+            1579936500,
+            1580040300,
+            1580042400,
+            1580403600,
+            1580403900
+          ]
+        }
+      ],
+      "metrics": {
+        "expected_count": 701280,
+        "actual_count": 700812,
+        "missing_count": 468,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:LTC-USD_300",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 700812,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:LTC-USD_86400",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "missing_utc_grid",
+          "series": "LTC-USD_86400",
+          "count": 1,
+          "sample_epoch": [
+            1471651200
+          ]
+        }
+      ],
+      "metrics": {
+        "expected_count": 3667,
+        "actual_count": 3666,
+        "missing_count": 1,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:LTC-USD_86400",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 3666,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:LINK-USD_300",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "missing_utc_grid",
+          "series": "LINK-USD_300",
+          "count": 524,
+          "sample_epoch": [
+            1577840400,
+            1577850300,
+            1577860200,
+            1577862900,
+            1577864700,
+            1577865600,
+            1577874000,
+            1577875200,
+            1577875800,
+            1577879400,
+            1577881200,
+            1577883000,
+            1577886300,
+            1577893500,
+            1577908500,
+            1577929200,
+            1577940900,
+            1577947500,
+            1577948400,
+            1577949900
+          ]
+        }
+      ],
+      "metrics": {
+        "expected_count": 701280,
+        "actual_count": 700756,
+        "missing_count": 524,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:LINK-USD_300",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 700756,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "utc_grid:LINK-USD_86400",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "missing_utc_grid",
+          "series": "LINK-USD_86400",
+          "count": 1,
+          "sample_epoch": [
+            1561507200
+          ]
+        }
+      ],
+      "metrics": {
+        "expected_count": 2624,
+        "actual_count": 2623,
+        "missing_count": 1,
+        "duplicate_count": 0
+      }
+    },
+    {
+      "name": "ohlc:Coinbase:LINK-USD_86400",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 2623,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "pagination_consistency",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "boundary_checks": 16057
+      }
+    },
+    {
+      "name": "ohlc:Nikkei",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 895,
+        "invalid_rows": 0
+      }
+    },
+    {
+      "name": "wareki_dates",
+      "passed": false,
+      "violation_count": 1,
+      "violations": [
+        {
+          "kind": "weekend_dates",
+          "count": 519,
+          "sample": [
+            "1974-09-28T00:00:00",
+            "1974-10-05T00:00:00",
+            "1974-10-12T00:00:00",
+            "1974-10-26T00:00:00",
+            "1974-11-02T00:00:00",
+            "1974-11-09T00:00:00",
+            "1974-11-30T00:00:00",
+            "1974-12-07T00:00:00",
+            "1974-12-14T00:00:00",
+            "1974-12-28T00:00:00",
+            "1975-01-04T00:00:00",
+            "1975-01-11T00:00:00",
+            "1975-01-25T00:00:00",
+            "1975-02-01T00:00:00",
+            "1975-02-08T00:00:00",
+            "1975-02-22T00:00:00",
+            "1975-03-01T00:00:00",
+            "1975-03-08T00:00:00",
+            "1975-03-22T00:00:00",
+            "1975-03-29T00:00:00"
+          ]
+        }
+      ],
+      "metrics": {
+        "rows": 13290,
+        "nat_count": 0
+      }
+    },
+    {
+      "name": "ecb",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 7082,
+        "nan_rate": {
+          "USD": 0.0,
+          "JPY": 0.0,
+          "GBP": 0.0,
+          "CHF": 0.0,
+          "AUD": 0.0,
+          "CNY": 0.22578367692742163,
+          "KRW": 0.0,
+          "MXN": 0.32533182716746684
+        },
+        "zero_rows": 0
+      }
+    },
+    {
+      "name": "random_samples",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "path": "results\\audit\\random_samples.csv",
+        "rows": 840,
+        "series": 42
+      }
+    },
+    {
+      "name": "rv",
+      "passed": true,
+      "violation_count": 0,
+      "violations": [],
+      "metrics": {
+        "rows": 17573,
+        "missing_rate": 0.014624708359415012,
+        "missing_rate_by_series": {
+          "RV_ADA": 0.019568489713998997,
+          "RV_BTC": 0.00862422997946612,
+          "RV_DOGE": 0.008872651356993737,
+          "RV_ETH": 0.00944558521560575,
+          "RV_LINK": 0.026283367556468172,
+          "RV_LTC": 0.02751540041067762,
+          "RV_N225_GK": 0.0,
+          "RV_SOL": 0.008412197686645636,
+          "RV_XRP": 0.008873114463176575
+        },
+        "m_intervals_distribution": {
+          "RV_ADA": {
+            "94.0": 1,
+            "208.0": 1,
+            "216.0": 1,
+            "225.0": 1,
+            "272.0": 2,
+            "275.0": 1,
+            "277.0": 1,
+            "279.0": 1,
+            "283.0": 4,
+            "284.0": 1,
+            "285.0": 7,
+            "286.0": 18,
+            "287.0": 1954
+          },
+          "RV_BTC": {
+            "209.0": 1,
+            "217.0": 1,
+            "232.0": 1,
+            "267.0": 1,
+            "269.0": 1,
+            "273.0": 1,
+            "274.0": 2,
+            "276.0": 1,
+            "277.0": 2,
+            "279.0": 1,
+            "280.0": 2,
+            "281.0": 2,
+            "282.0": 1,
+            "285.0": 1,
+            "286.0": 3,
+            "287.0": 2414
+          },
+          "RV_DOGE": {
+            "93.0": 1,
+            "208.0": 1,
+            "215.0": 1,
+            "227.0": 1,
+            "271.0": 1,
+            "275.0": 1,
+            "276.0": 1,
+            "279.0": 1,
+            "283.0": 1,
+            "284.0": 1,
+            "285.0": 1,
+            "286.0": 6,
+            "287.0": 1899
+          },
+          "RV_ETH": {
+            "208.0": 1,
+            "218.0": 1,
+            "233.0": 1,
+            "267.0": 1,
+            "269.0": 1,
+            "272.0": 1,
+            "274.0": 2,
+            "275.0": 1,
+            "277.0": 2,
+            "279.0": 1,
+            "280.0": 3,
+            "282.0": 3,
+            "285.0": 1,
+            "286.0": 4,
+            "287.0": 2412
+          },
+          "RV_LINK": {
+            "208.0": 1,
+            "216.0": 1,
+            "220.0": 1,
+            "246.0": 1,
+            "265.0": 1,
+            "269.0": 1,
+            "271.0": 1,
+            "272.0": 2,
+            "275.0": 2,
+            "277.0": 4,
+            "278.0": 1,
+            "279.0": 2,
+            "281.0": 3,
+            "282.0": 2,
+            "283.0": 1,
+            "284.0": 4,
+            "285.0": 11,
+            "286.0": 25,
+            "287.0": 2371
+          },
+          "RV_LTC": {
+            "208.0": 1,
+            "213.0": 1,
+            "224.0": 1,
+            "261.0": 1,
+            "267.0": 1,
+            "269.0": 1,
+            "272.0": 1,
+            "274.0": 1,
+            "275.0": 2,
+            "277.0": 2,
+            "278.0": 1,
+            "279.0": 3,
+            "282.0": 1,
+            "283.0": 3,
+            "284.0": 4,
+            "285.0": 11,
+            "286.0": 32,
+            "287.0": 2368
+          },
+          "RV_N225_GK": {
+            "nan": 895
+          },
+          "RV_SOL": {
+            "94.0": 1,
+            "208.0": 1,
+            "216.0": 1,
+            "227.0": 1,
+            "272.0": 1,
+            "275.0": 1,
+            "277.0": 1,
+            "279.0": 1,
+            "283.0": 3,
+            "285.0": 2,
+            "286.0": 3,
+            "287.0": 1886
+          },
+          "RV_XRP": {
+            "208.0": 1,
+            "216.0": 1,
+            "272.0": 1,
+            "275.0": 1,
+            "283.0": 3,
+            "285.0": 2,
+            "286.0": 1,
+            "287.0": 1117
+          }
+        }
+      }
+    }
+  ]
+}

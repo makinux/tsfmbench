@@ -1,0 +1,56 @@
+{
+  "config_hashes": {
+    "AutoETS": "c27595f9a0db",
+    "AutoTheta": "910417323e6c",
+    "LightGBM": "3c974405e306",
+    "RW": "b831e44f640d",
+    "TimesFM3-log": "37fa448e57d8",
+    "TimesFM3-raw": "1bdcacde0285"
+  },
+  "created_at": "2026-09-01T05:49:25.113319+00:00",
+  "data_hash": "39499d4268928f8f93cf59b0f33c9b413c25ddd600f5ef1f1d420b96ca5b90f8",
+  "entries": [
+    {
+      "expected_rows": 6554,
+      "model_variant": "AutoETS",
+      "task": "price"
+    },
+    {
+      "expected_rows": 6554,
+      "model_variant": "AutoTheta",
+      "task": "price"
+    },
+    {
+      "expected_rows": 6554,
+      "model_variant": "LightGBM",
+      "task": "price"
+    },
+    {
+      "expected_rows": 6554,
+      "model_variant": "RW",
+      "task": "price"
+    },
+    {
+      "expected_rows": 6554,
+      "model_variant": "TimesFM3-log",
+      "task": "price"
+    },
+    {
+      "expected_rows": 6554,
+      "model_variant": "TimesFM3-raw",
+      "task": "price"
+    }
+  ],
+  "estimation": "rolling",
+  "expected_rows": {
+    "AutoETS": 6554,
+    "AutoTheta": 6554,
+    "LightGBM": 6554,
+    "RW": 6554,
+    "TimesFM3-log": 6554,
+    "TimesFM3-raw": 6554
+  },
+  "run_id": "price-main-330da8e61162",
+  "task": "price",
+  "window": "main"
+}

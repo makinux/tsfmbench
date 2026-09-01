@@ -1,0 +1,1514 @@
+{
+  "schema_version": 1,
+  "task": "volume",
+  "window": "main",
+  "run_id": "volume-main-44c6d78ac972",
+  "claim_scope": "本ベンチマークが判定するのは「**TimesFM 3.0 の下記指定構成が、本パネルの実務ベースラインに、指定タスク・指定窓で勝つか**」のみである。TSFM（時系列基盤モデル）一般の優劣、および商用導入可否（重みは非商用ライセンス）には及ばない。",
+  "window_disclaimer": "学習済みの可能性があるため、本窓での TimesFM の勝ちは能力の証拠として報告しない。",
+  "primary_benchmark": "SeasonalNaive7",
+  "primary_model": "TimesFM3-raw",
+  "primary_metric": "per-series MAE ratio vs SeasonalNaive7",
+  "leaderboards": {
+    "h1": [
+      {
+        "model": "AutoETS",
+        "ratio_median": 0.6471927165646361,
+        "ratio_mean": 0.6352337157592177,
+        "win_rate": 1.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 854,
+        "fail_reasons": {},
+        "runtime_total_s": 592.6564136999805,
+        "runtime_per_origin_s": 4.857839456557217,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "AutoTheta",
+        "ratio_median": 0.6487591031043706,
+        "ratio_mean": 0.6357656017025575,
+        "win_rate": 1.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 854,
+        "fail_reasons": {},
+        "runtime_total_s": 337.26662099998794,
+        "runtime_per_origin_s": 2.7644804999999013,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "LightGBM",
+        "ratio_median": 0.63877036898666,
+        "ratio_mean": 0.6425608800184782,
+        "win_rate": 1.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 854,
+        "fail_reasons": {},
+        "runtime_total_s": 595.4944076000247,
+        "runtime_per_origin_s": 4.881101701639547,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "SeasonalMedian4",
+        "ratio_median": 0.8891923643297337,
+        "ratio_mean": 0.8956611341410845,
+        "win_rate": 1.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 854,
+        "fail_reasons": {},
+        "runtime_total_s": 5.047190099910949,
+        "runtime_per_origin_s": 0.04137041065500778,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "SeasonalNaive7",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 854,
+        "fail_reasons": {},
+        "runtime_total_s": 5.2232037000358105,
+        "runtime_per_origin_s": 0.042813145082260744,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "TimesFM3-log",
+        "ratio_median": 0.6094688045166455,
+        "ratio_mean": 0.6085781807223916,
+        "win_rate": 1.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 854,
+        "fail_reasons": {},
+        "runtime_total_s": 69.5446479000093,
+        "runtime_per_origin_s": 0.5700380975410598,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.6073106312565705,
+        "ratio_mean": 0.6071527217300481,
+        "win_rate": 1.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 854,
+        "fail_reasons": {},
+        "runtime_total_s": 72.53109230002156,
+        "runtime_per_origin_s": 0.5945171500001767,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      }
+    ],
+    "h5": [
+      {
+        "model": "AutoETS",
+        "ratio_median": 0.8594282249467003,
+        "ratio_mean": 0.8599734369011477,
+        "win_rate": 1.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 847,
+        "fail_reasons": {},
+        "runtime_total_s": 584.4773173999856,
+        "runtime_per_origin_s": 4.830391052892443,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "AutoTheta",
+        "ratio_median": 0.8706523910986215,
+        "ratio_mean": 0.8647832801314346,
+        "win_rate": 1.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 847,
+        "fail_reasons": {},
+        "runtime_total_s": 333.96320329999435,
+        "runtime_per_origin_s": 2.760026473553672,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "LightGBM",
+        "ratio_median": 0.7947563752082304,
+        "ratio_mean": 0.8180762296511598,
+        "win_rate": 1.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 847,
+        "fail_reasons": {},
+        "runtime_total_s": 592.460189600024,
+        "runtime_per_origin_s": 4.896365203305984,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "SeasonalMedian4",
+        "ratio_median": 0.9035461572001385,
+        "ratio_mean": 0.9108413478262868,
+        "win_rate": 1.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 847,
+        "fail_reasons": {},
+        "runtime_total_s": 5.025921899912646,
+        "runtime_per_origin_s": 0.04153654462737724,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "SeasonalNaive7",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 847,
+        "fail_reasons": {},
+        "runtime_total_s": 5.198191600036807,
+        "runtime_per_origin_s": 0.04296026115732899,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "TimesFM3-log",
+        "ratio_median": 0.7849425997539132,
+        "ratio_mean": 0.7881503552134095,
+        "win_rate": 1.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 847,
+        "fail_reasons": {},
+        "runtime_total_s": 68.9858348500129,
+        "runtime_per_origin_s": 0.5701308665290323,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.7868383973785882,
+        "ratio_mean": 0.7869469158807683,
+        "win_rate": 1.0,
+        "series_used": 7,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 847,
+        "fail_reasons": {},
+        "runtime_total_s": 71.8972942500186,
+        "runtime_per_origin_s": 0.5941925144629636,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      }
+    ]
+  },
+  "primary_tests": [
+    {
+      "task": "volume",
+      "h": 1,
+      "model": "TimesFM3-raw",
+      "benchmark": "SeasonalNaive7",
+      "status": "ok",
+      "series_count": 7,
+      "mean_dbar": -0.19417669271235805,
+      "sign_stat": 0.0,
+      "sign_pvalue": 0.015625,
+      "sign_n": 7,
+      "bootstrap_estimate": -0.19417669271235805,
+      "bootstrap_ci_low": -0.21154772610258843,
+      "bootstrap_ci_high": -0.1770355632385517,
+      "bootstrap_pvalue": 0.0009995002498750624,
+      "standardized_effect": -7.798710680220241,
+      "mde_sd": 0.2557060536050732,
+      "mde_n_origins": 122,
+      "power_note": "MDE 以上",
+      "holm_pvalue": 0.03125
+    },
+    {
+      "task": "volume",
+      "h": 5,
+      "model": "TimesFM3-raw",
+      "benchmark": "SeasonalNaive7",
+      "status": "ok",
+      "series_count": 7,
+      "mean_dbar": -0.10105535198400008,
+      "sign_stat": 0.0,
+      "sign_pvalue": 0.015625,
+      "sign_n": 7,
+      "bootstrap_estimate": -0.10105535198400008,
+      "bootstrap_ci_low": -0.1158200585527845,
+      "bootstrap_ci_high": -0.0856846227636859,
+      "bootstrap_pvalue": 0.0009995002498750624,
+      "standardized_effect": -4.52942471273772,
+      "mde_sd": 0.25677793116596104,
+      "mde_n_origins": 121,
+      "power_note": "MDE 以上",
+      "holm_pvalue": 0.03125
+    }
+  ],
+  "mcs": {
+    "h1": {
+      "mcs_universe": [
+        "AutoETS",
+        "AutoTheta",
+        "LightGBM",
+        "SeasonalMedian4",
+        "SeasonalNaive7",
+        "TimesFM3-log",
+        "TimesFM3-raw"
+      ],
+      "excluded_partial_coverage": [],
+      "status": "ok",
+      "origin_count": 122,
+      "common_rows": 854,
+      "included": [
+        "TimesFM3-raw"
+      ],
+      "excluded": [
+        "AutoETS",
+        "AutoTheta",
+        "LightGBM",
+        "SeasonalMedian4",
+        "SeasonalNaive7",
+        "TimesFM3-log"
+      ],
+      "pvalues": {
+        "SeasonalNaive7": 0.0,
+        "SeasonalMedian4": 0.0,
+        "LightGBM": 0.0,
+        "AutoETS": 0.001,
+        "AutoTheta": 0.001,
+        "TimesFM3-log": 0.042,
+        "TimesFM3-raw": 1.0
+      }
+    },
+    "h5": {
+      "mcs_universe": [
+        "AutoETS",
+        "AutoTheta",
+        "LightGBM",
+        "SeasonalMedian4",
+        "SeasonalNaive7",
+        "TimesFM3-log",
+        "TimesFM3-raw"
+      ],
+      "excluded_partial_coverage": [],
+      "status": "ok",
+      "origin_count": 121,
+      "common_rows": 847,
+      "included": [
+        "TimesFM3-log",
+        "TimesFM3-raw"
+      ],
+      "excluded": [
+        "AutoETS",
+        "AutoTheta",
+        "LightGBM",
+        "SeasonalMedian4",
+        "SeasonalNaive7"
+      ],
+      "pvalues": {
+        "SeasonalNaive7": 0.0,
+        "SeasonalMedian4": 0.0,
+        "AutoTheta": 0.0,
+        "AutoETS": 0.0,
+        "LightGBM": 0.014,
+        "TimesFM3-log": 0.229,
+        "TimesFM3-raw": 1.0
+      }
+    }
+  },
+  "calibration": {
+    "h1": {
+      "coverage": [
+        {
+          "model": "AutoETS",
+          "overall": 0.8138173302107728,
+          "low": 0.8596491228070176,
+          "middle": 0.8309859154929577,
+          "high": 0.7508771929824561,
+          "n_used": 854,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "AutoTheta",
+          "overall": 0.8161592505854801,
+          "low": 0.8666666666666667,
+          "middle": 0.823943661971831,
+          "high": 0.7578947368421053,
+          "n_used": 854,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "LightGBM",
+          "overall": 0.5667447306791569,
+          "low": 0.6035087719298246,
+          "middle": 0.5704225352112676,
+          "high": 0.5263157894736842,
+          "n_used": 854,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "SeasonalMedian4",
+          "overall": 0.8255269320843092,
+          "low": 0.8140350877192982,
+          "middle": 0.8626760563380281,
+          "high": 0.8,
+          "n_used": 854,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "SeasonalNaive7",
+          "overall": 0.8255269320843092,
+          "low": 0.8140350877192982,
+          "middle": 0.8626760563380281,
+          "high": 0.8,
+          "n_used": 854,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "TimesFM3-log",
+          "overall": 0.7915690866510539,
+          "low": 0.8105263157894737,
+          "middle": 0.8274647887323944,
+          "high": 0.7368421052631579,
+          "n_used": 854,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "TimesFM3-raw",
+          "overall": 0.7927400468384075,
+          "low": 0.8105263157894737,
+          "middle": 0.8274647887323944,
+          "high": 0.7403508771929824,
+          "n_used": 854,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        }
+      ],
+      "wql": [
+        {
+          "model": "AutoETS",
+          "wql": 0.017819520102344433,
+          "n_used": 854
+        },
+        {
+          "model": "AutoTheta",
+          "wql": 0.0178518271089004,
+          "n_used": 854
+        },
+        {
+          "model": "LightGBM",
+          "wql": 0.018913343315414603,
+          "n_used": 854
+        },
+        {
+          "model": "SeasonalMedian4",
+          "wql": 0.02557952332782215,
+          "n_used": 854
+        },
+        {
+          "model": "SeasonalNaive7",
+          "wql": 0.02557952332782215,
+          "n_used": 854
+        },
+        {
+          "model": "TimesFM3-log",
+          "wql": 0.017051277893273997,
+          "n_used": 854
+        },
+        {
+          "model": "TimesFM3-raw",
+          "wql": 0.0170291236045863,
+          "n_used": 854
+        }
+      ],
+      "var_tests": []
+    },
+    "h5": {
+      "coverage": [
+        {
+          "model": "AutoETS",
+          "overall": 0.8559622195985832,
+          "low": 0.8975265017667845,
+          "middle": 0.8546099290780141,
+          "high": 0.8156028368794326,
+          "n_used": 847,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "AutoTheta",
+          "overall": 0.8382526564344747,
+          "low": 0.8869257950530035,
+          "middle": 0.8333333333333334,
+          "high": 0.7943262411347518,
+          "n_used": 847,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "LightGBM",
+          "overall": 0.5962219598583235,
+          "low": 0.6219081272084805,
+          "middle": 0.5531914893617021,
+          "high": 0.6134751773049646,
+          "n_used": 847,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "SeasonalMedian4",
+          "overall": 0.8311688311688312,
+          "low": 0.823321554770318,
+          "middle": 0.8829787234042553,
+          "high": 0.7872340425531915,
+          "n_used": 847,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "SeasonalNaive7",
+          "overall": 0.8311688311688312,
+          "low": 0.823321554770318,
+          "middle": 0.8829787234042553,
+          "high": 0.7872340425531915,
+          "n_used": 847,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "TimesFM3-log",
+          "overall": 0.8181818181818182,
+          "low": 0.8303886925795053,
+          "middle": 0.8333333333333334,
+          "high": 0.7907801418439716,
+          "n_used": 847,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "TimesFM3-raw",
+          "overall": 0.8158205430932703,
+          "low": 0.8303886925795053,
+          "middle": 0.8333333333333334,
+          "high": 0.7836879432624113,
+          "n_used": 847,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        }
+      ],
+      "wql": [
+        {
+          "model": "AutoETS",
+          "wql": 0.0229910167604949,
+          "n_used": 847
+        },
+        {
+          "model": "AutoTheta",
+          "wql": 0.023164727075841888,
+          "n_used": 847
+        },
+        {
+          "model": "LightGBM",
+          "wql": 0.022733892672654913,
+          "n_used": 847
+        },
+        {
+          "model": "SeasonalMedian4",
+          "wql": 0.024885882524918808,
+          "n_used": 847
+        },
+        {
+          "model": "SeasonalNaive7",
+          "wql": 0.024885882524918808,
+          "n_used": 847
+        },
+        {
+          "model": "TimesFM3-log",
+          "wql": 0.020577850806618222,
+          "n_used": 847
+        },
+        {
+          "model": "TimesFM3-raw",
+          "wql": 0.02058100573944884,
+          "n_used": 847
+        }
+      ],
+      "var_tests": []
+    }
+  },
+  "task_p": null,
+  "diagnostics": {
+    "half_split": [
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "AutoETS",
+        "win_rate": 1.0,
+        "ratio_median": 0.6839198117394144,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "AutoTheta",
+        "win_rate": 1.0,
+        "ratio_median": 0.6562549493231877,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "LightGBM",
+        "win_rate": 1.0,
+        "ratio_median": 0.6670102824188996,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "SeasonalMedian4",
+        "win_rate": 0.8571428571428571,
+        "ratio_median": 0.8611221791699327,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "SeasonalNaive7",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "TimesFM3-log",
+        "win_rate": 1.0,
+        "ratio_median": 0.6431374104772141,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 1.0,
+        "ratio_median": 0.6394452342235888,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "AutoETS",
+        "win_rate": 1.0,
+        "ratio_median": 0.598662582490608,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "AutoTheta",
+        "win_rate": 1.0,
+        "ratio_median": 0.593375501949839,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "LightGBM",
+        "win_rate": 1.0,
+        "ratio_median": 0.6241109571306936,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "SeasonalMedian4",
+        "win_rate": 1.0,
+        "ratio_median": 0.8996450053559062,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "SeasonalNaive7",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "TimesFM3-log",
+        "win_rate": 1.0,
+        "ratio_median": 0.5899457769743658,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 1.0,
+        "ratio_median": 0.5891590236711093,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "AutoETS",
+        "win_rate": 1.0,
+        "ratio_median": 0.8477356953336435,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "AutoTheta",
+        "win_rate": 1.0,
+        "ratio_median": 0.847734623331404,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "LightGBM",
+        "win_rate": 1.0,
+        "ratio_median": 0.7739577873996385,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "SeasonalMedian4",
+        "win_rate": 1.0,
+        "ratio_median": 0.936610767307204,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "SeasonalNaive7",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "TimesFM3-log",
+        "win_rate": 1.0,
+        "ratio_median": 0.7674980464844345,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 1.0,
+        "ratio_median": 0.7675568089614573,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "AutoETS",
+        "win_rate": 1.0,
+        "ratio_median": 0.8586636072118607,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "AutoTheta",
+        "win_rate": 1.0,
+        "ratio_median": 0.8546008762478965,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "LightGBM",
+        "win_rate": 1.0,
+        "ratio_median": 0.837989875524909,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "SeasonalMedian4",
+        "win_rate": 1.0,
+        "ratio_median": 0.9291705034464548,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "SeasonalNaive7",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "TimesFM3-log",
+        "win_rate": 1.0,
+        "ratio_median": 0.8059025824669038,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 1.0,
+        "ratio_median": 0.8034383296490029,
+        "series_used": 7
+      }
+    ],
+    "group_breakdown": [
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "AutoETS",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "AutoTheta",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "LightGBM",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "SeasonalMedian4",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "SeasonalNaive7",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "TimesFM3-log",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "TimesFM3-raw",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "AutoETS",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "AutoTheta",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "LightGBM",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "SeasonalMedian4",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "SeasonalNaive7",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "TimesFM3-log",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "TimesFM3-raw",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "AutoETS",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "AutoTheta",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "LightGBM",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "SeasonalMedian4",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "SeasonalNaive7",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "TimesFM3-log",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "TimesFM3-raw",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "AutoETS",
+        "ratio_median": 0.6471927165646361,
+        "ratio_mean": 0.6352337157592177,
+        "win_rate": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "AutoTheta",
+        "ratio_median": 0.6487591031043706,
+        "ratio_mean": 0.6357656017025575,
+        "win_rate": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "LightGBM",
+        "ratio_median": 0.63877036898666,
+        "ratio_mean": 0.6425608800184782,
+        "win_rate": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "SeasonalMedian4",
+        "ratio_median": 0.8891923643297337,
+        "ratio_mean": 0.8956611341410845,
+        "win_rate": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "SeasonalNaive7",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "TimesFM3-log",
+        "ratio_median": 0.6094688045166455,
+        "ratio_mean": 0.6085781807223916,
+        "win_rate": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.6073106312565705,
+        "ratio_mean": 0.6071527217300481,
+        "win_rate": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "AutoETS",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "AutoTheta",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "LightGBM",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "SeasonalMedian4",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "SeasonalNaive7",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "TimesFM3-log",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "TimesFM3-raw",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "AutoETS",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "AutoTheta",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "LightGBM",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "SeasonalMedian4",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "SeasonalNaive7",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "TimesFM3-log",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "TimesFM3-raw",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "AutoETS",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "AutoTheta",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "LightGBM",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "SeasonalMedian4",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "SeasonalNaive7",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "TimesFM3-log",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "TimesFM3-raw",
+        "ratio_median": null,
+        "ratio_mean": null,
+        "win_rate": null,
+        "series_used": 0
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "AutoETS",
+        "ratio_median": 0.8594282249467003,
+        "ratio_mean": 0.8599734369011477,
+        "win_rate": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "AutoTheta",
+        "ratio_median": 0.8706523910986215,
+        "ratio_mean": 0.8647832801314346,
+        "win_rate": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "LightGBM",
+        "ratio_median": 0.7947563752082304,
+        "ratio_mean": 0.8180762296511598,
+        "win_rate": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "SeasonalMedian4",
+        "ratio_median": 0.9035461572001385,
+        "ratio_mean": 0.9108413478262868,
+        "win_rate": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "SeasonalNaive7",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "TimesFM3-log",
+        "ratio_median": 0.7849425997539132,
+        "ratio_mean": 0.7881503552134095,
+        "win_rate": 1.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.7868383973785882,
+        "ratio_mean": 0.7869469158807683,
+        "win_rate": 1.0,
+        "series_used": 7
+      }
+    ],
+    "special_series": [
+      {
+        "h": 1,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "AutoETS",
+        "ratio": 0.5879686630835147
+      },
+      {
+        "h": 1,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "AutoTheta",
+        "ratio": 0.5915610192042687
+      },
+      {
+        "h": 1,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "LightGBM",
+        "ratio": 0.603771863783991
+      },
+      {
+        "h": 1,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "SeasonalMedian4",
+        "ratio": 0.9338711674466005
+      },
+      {
+        "h": 1,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "SeasonalNaive7",
+        "ratio": 1.0
+      },
+      {
+        "h": 1,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "TimesFM3-log",
+        "ratio": 0.5773097076160991
+      },
+      {
+        "h": 1,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "TimesFM3-raw",
+        "ratio": 0.5744585396726597
+      },
+      {
+        "h": 5,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "AutoETS",
+        "ratio": 0.8197603528409527
+      },
+      {
+        "h": 5,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "AutoTheta",
+        "ratio": 0.8199934596677753
+      },
+      {
+        "h": 5,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "LightGBM",
+        "ratio": 0.7926274761901039
+      },
+      {
+        "h": 5,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "SeasonalMedian4",
+        "ratio": 0.8753905129609368
+      },
+      {
+        "h": 5,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "SeasonalNaive7",
+        "ratio": 1.0
+      },
+      {
+        "h": 5,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "TimesFM3-log",
+        "ratio": 0.7460020442579399
+      },
+      {
+        "h": 5,
+        "unique_id": "VOL_Coinbase_XRP-USD_base",
+        "model": "TimesFM3-raw",
+        "ratio": 0.7432572487646926
+      }
+    ],
+    "timesfm3_log_coverage": []
+  },
+  "reference_models": [
+    {
+      "h": 1,
+      "model": "Prophet",
+      "ratio_median": 0.8542248710827538,
+      "ratio_mean": 0.854714172399545,
+      "fail_count": 0,
+      "n_used": 854
+    },
+    {
+      "h": 5,
+      "model": "Prophet",
+      "ratio_median": 0.9421876492129924,
+      "ratio_mean": 0.9598841743871965,
+      "fail_count": 0,
+      "n_used": 847
+    }
+  ],
+  "manifest": {
+    "status": "ok",
+    "expected": {
+      "AutoETS": 1944,
+      "AutoTheta": 1944,
+      "LightGBM": 1944,
+      "Prophet": 1944,
+      "SeasonalMedian4": 1944,
+      "SeasonalNaive7": 1944,
+      "TimesFM3-log": 1944,
+      "TimesFM3-raw": 1944
+    },
+    "actual": {
+      "AutoETS": 1944,
+      "AutoTheta": 1944,
+      "LightGBM": 1944,
+      "Prophet": 1944,
+      "SeasonalMedian4": 1944,
+      "SeasonalNaive7": 1944,
+      "TimesFM3-log": 1944,
+      "TimesFM3-raw": 1944
+    },
+    "rows": [
+      {
+        "model": "AutoETS",
+        "expected_rows": 1944,
+        "actual_rows": 1944,
+        "match": true
+      },
+      {
+        "model": "AutoTheta",
+        "expected_rows": 1944,
+        "actual_rows": 1944,
+        "match": true
+      },
+      {
+        "model": "LightGBM",
+        "expected_rows": 1944,
+        "actual_rows": 1944,
+        "match": true
+      },
+      {
+        "model": "Prophet",
+        "expected_rows": 1944,
+        "actual_rows": 1944,
+        "match": true
+      },
+      {
+        "model": "SeasonalMedian4",
+        "expected_rows": 1944,
+        "actual_rows": 1944,
+        "match": true
+      },
+      {
+        "model": "SeasonalNaive7",
+        "expected_rows": 1944,
+        "actual_rows": 1944,
+        "match": true
+      },
+      {
+        "model": "TimesFM3-log",
+        "expected_rows": 1944,
+        "actual_rows": 1944,
+        "match": true
+      },
+      {
+        "model": "TimesFM3-raw",
+        "expected_rows": 1944,
+        "actual_rows": 1944,
+        "match": true
+      }
+    ]
+  },
+  "plots": [
+    "plots/calibration.png",
+    "plots/primary_loss_difference.png"
+  ]
+}

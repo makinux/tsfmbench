@@ -1,0 +1,3332 @@
+{
+  "schema_version": 1,
+  "task": "price",
+  "window": "main",
+  "run_id": "price-main-330da8e61162",
+  "claim_scope": "本ベンチマークが判定するのは「**TimesFM 3.0 の下記指定構成が、本パネルの実務ベースラインに、指定タスク・指定窓で勝つか**」のみである。TSFM（時系列基盤モデル）一般の優劣、および商用導入可否（重みは非商用ライセンス）には及ばない。",
+  "window_disclaimer": "学習済みの可能性があるため、本窓での TimesFM の勝ちは能力の証拠として報告しない。",
+  "primary_benchmark": "RW",
+  "primary_model": "TimesFM3-raw",
+  "primary_metric": "per-series MAE ratio vs RW",
+  "leaderboards": {
+    "h1": [
+      {
+        "model": "AutoETS",
+        "ratio_median": 1.0006036750570777,
+        "ratio_mean": 0.9995641430198403,
+        "win_rate": 0.42105263157894735,
+        "series_used": 19,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 1846,
+        "fail_reasons": {},
+        "runtime_total_s": 2183.2848182000307,
+        "runtime_per_origin_s": 9.021838091735663,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "AutoTheta",
+        "ratio_median": 0.9981775484951988,
+        "ratio_mean": 1.0023836970833198,
+        "win_rate": 0.5263157894736842,
+        "series_used": 19,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 1846,
+        "fail_reasons": {},
+        "runtime_total_s": 483.56654479997815,
+        "runtime_per_origin_s": 1.9982088628098271,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "LightGBM",
+        "ratio_median": 34.87278046707484,
+        "ratio_mean": 206.99819161368828,
+        "win_rate": 0.0,
+        "series_used": 19,
+        "fail_count": 790,
+        "fail_rate": 0.4279523293607801,
+        "n_used": 1056,
+        "fail_reasons": {
+          "insufficient_history": 790
+        },
+        "runtime_total_s": 716.8404765999148,
+        "runtime_per_origin_s": 2.962150729751714,
+        "misconfiguration_warning": true,
+        "footnote_marker": "†"
+      },
+      {
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 19,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 1846,
+        "fail_reasons": {},
+        "runtime_total_s": 58.15052749996539,
+        "runtime_per_origin_s": 0.24029143595027022,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "TimesFM3-log",
+        "ratio_median": 1.0173447623309333,
+        "ratio_mean": 1.0234139192371505,
+        "win_rate": 0.1875,
+        "series_used": 16,
+        "fail_count": 243,
+        "fail_rate": 0.13163596966413868,
+        "n_used": 1603,
+        "fail_reasons": {
+          "invalid_context": 243
+        },
+        "runtime_total_s": 91.42943800007924,
+        "runtime_per_origin_s": 0.3778075950416498,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "TimesFM3-raw",
+        "ratio_median": 1.0140000444089952,
+        "ratio_mean": 1.0175937259622878,
+        "win_rate": 0.2631578947368421,
+        "series_used": 19,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 1846,
+        "fail_reasons": {},
+        "runtime_total_s": 101.12603899993701,
+        "runtime_per_origin_s": 0.41787619421461575,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      }
+    ],
+    "h5": [
+      {
+        "model": "AutoETS",
+        "ratio_median": 1.0002370578087312,
+        "ratio_mean": 0.9963477805751867,
+        "win_rate": 0.47368421052631576,
+        "series_used": 19,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 1827,
+        "fail_reasons": {},
+        "runtime_total_s": 2152.666867100037,
+        "runtime_per_origin_s": 8.969445279583487,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "AutoTheta",
+        "ratio_median": 1.0074579072884873,
+        "ratio_mean": 1.0000779353899614,
+        "win_rate": 0.3684210526315789,
+        "series_used": 19,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 1827,
+        "fail_reasons": {},
+        "runtime_total_s": 480.9675067999633,
+        "runtime_per_origin_s": 2.0040312783331804,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "LightGBM",
+        "ratio_median": 8.838451503692323,
+        "ratio_mean": 134.54419895290152,
+        "win_rate": 0.0,
+        "series_used": 19,
+        "fail_count": 778,
+        "fail_rate": 0.4258347016967707,
+        "n_used": 1049,
+        "fail_reasons": {
+          "insufficient_history": 778
+        },
+        "runtime_total_s": 715.9046533999062,
+        "runtime_per_origin_s": 2.9829360558329427,
+        "misconfiguration_warning": true,
+        "footnote_marker": "†"
+      },
+      {
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 19,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 1827,
+        "fail_reasons": {},
+        "runtime_total_s": 57.87903109996114,
+        "runtime_per_origin_s": 0.24116262958317142,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "TimesFM3-log",
+        "ratio_median": 1.0187284854538086,
+        "ratio_mean": 1.0134636142620153,
+        "win_rate": 0.1875,
+        "series_used": 16,
+        "fail_count": 240,
+        "fail_rate": 0.13136288998357964,
+        "n_used": 1587,
+        "fail_reasons": {
+          "invalid_context": 240
+        },
+        "runtime_total_s": 90.36476520008,
+        "runtime_per_origin_s": 0.37651985500033336,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "TimesFM3-raw",
+        "ratio_median": 1.0146104611397864,
+        "ratio_mean": 1.0082945959470677,
+        "win_rate": 0.3157894736842105,
+        "series_used": 19,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 1827,
+        "fail_reasons": {},
+        "runtime_total_s": 100.04045499993663,
+        "runtime_per_origin_s": 0.41683522916640264,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      }
+    ],
+    "h20": [
+      {
+        "model": "AutoETS",
+        "ratio_median": 0.9996438012959699,
+        "ratio_mean": 0.9789301108466331,
+        "win_rate": 0.5263157894736842,
+        "series_used": 19,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 1770,
+        "fail_reasons": {},
+        "runtime_total_s": 2085.3912608000246,
+        "runtime_per_origin_s": 8.91192846495737,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "AutoTheta",
+        "ratio_median": 1.0040159615270077,
+        "ratio_mean": 0.9786805134999608,
+        "win_rate": 0.42105263157894735,
+        "series_used": 19,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 1770,
+        "fail_reasons": {},
+        "runtime_total_s": 474.17598309997993,
+        "runtime_per_origin_s": 2.0263930901708544,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "LightGBM",
+        "ratio_median": 6.449656476477298,
+        "ratio_mean": 69.64018810521706,
+        "win_rate": 0.0,
+        "series_used": 19,
+        "fail_count": 747,
+        "fail_rate": 0.42203389830508475,
+        "n_used": 1023,
+        "fail_reasons": {
+          "insufficient_history": 747
+        },
+        "runtime_total_s": 710.5025850999227,
+        "runtime_per_origin_s": 3.0363358337603534,
+        "misconfiguration_warning": true,
+        "footnote_marker": "†"
+      },
+      {
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 19,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 1770,
+        "fail_reasons": {},
+        "runtime_total_s": 56.644092499947874,
+        "runtime_per_origin_s": 0.2420687713672986,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "TimesFM3-log",
+        "ratio_median": 1.010939763231537,
+        "ratio_mean": 1.0014814841373623,
+        "win_rate": 0.375,
+        "series_used": 16,
+        "fail_count": 231,
+        "fail_rate": 0.13050847457627118,
+        "n_used": 1539,
+        "fail_reasons": {
+          "invalid_context": 231
+        },
+        "runtime_total_s": 87.81079095008681,
+        "runtime_per_origin_s": 0.37525979038498636,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      },
+      {
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.9906663403925986,
+        "ratio_mean": 0.9803634483575457,
+        "win_rate": 0.6842105263157895,
+        "series_used": 19,
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "n_used": 1770,
+        "fail_reasons": {},
+        "runtime_total_s": 97.26919397494567,
+        "runtime_per_origin_s": 0.41568031613224643,
+        "misconfiguration_warning": false,
+        "footnote_marker": ""
+      }
+    ]
+  },
+  "primary_tests": [
+    {
+      "task": "price",
+      "h": 1,
+      "model": "TimesFM3-raw",
+      "benchmark": "RW",
+      "status": "ok",
+      "series_count": 19,
+      "mean_dbar": 1.1210450203367668,
+      "sign_stat": 14.0,
+      "sign_pvalue": 0.063568115234375,
+      "sign_n": 19,
+      "bootstrap_estimate": 1.1210450203367668,
+      "bootstrap_ci_low": -0.10958916781564142,
+      "bootstrap_ci_high": 3.411128008753319,
+      "bootstrap_pvalue": 0.26186906546726635,
+      "standardized_effect": 0.2327120532775543,
+      "mde_sd": 0.18082465313477328,
+      "mde_n_origins": 242,
+      "power_note": "MDE 以上",
+      "holm_pvalue": 0.190704345703125
+    },
+    {
+      "task": "price",
+      "h": 5,
+      "model": "TimesFM3-raw",
+      "benchmark": "RW",
+      "status": "ok",
+      "series_count": 19,
+      "mean_dbar": 6.350448975191852,
+      "sign_stat": 13.0,
+      "sign_pvalue": 0.1670684814453125,
+      "sign_n": 19,
+      "bootstrap_estimate": 6.350448975191852,
+      "bootstrap_ci_low": 0.03527271786216736,
+      "bootstrap_ci_high": 16.503362829528495,
+      "bootstrap_pvalue": 0.001999000499750125,
+      "standardized_effect": 0.32120474734287136,
+      "mde_sd": 0.18158270453545186,
+      "mde_n_origins": 240,
+      "power_note": "MDE 以上",
+      "holm_pvalue": 0.334136962890625
+    },
+    {
+      "task": "price",
+      "h": 20,
+      "model": "TimesFM3-raw",
+      "benchmark": "RW",
+      "status": "ok",
+      "series_count": 19,
+      "mean_dbar": 14.257835906560143,
+      "sign_stat": 6.0,
+      "sign_pvalue": 0.1670684814453125,
+      "sign_n": 19,
+      "bootstrap_estimate": 14.257835906560143,
+      "bootstrap_ci_low": -0.6133383498783306,
+      "bootstrap_ci_high": 36.77089693005195,
+      "bootstrap_pvalue": 0.24587706146926536,
+      "standardized_effect": 0.3108808533577673,
+      "mde_sd": 0.3726779499070311,
+      "mde_n_origins": 234,
+      "power_note": "検出力不足 — 判別不能",
+      "holm_pvalue": 0.334136962890625
+    }
+  ],
+  "mcs": {
+    "h1": {
+      "mcs_universe": [
+        "AutoETS",
+        "AutoTheta",
+        "LightGBM",
+        "RW",
+        "TimesFM3-raw"
+      ],
+      "excluded_partial_coverage": [
+        {
+          "model": "TimesFM3-log",
+          "reason": "successful coverage missing for: JGB_10Y, JGB_2Y, JGB_5Y"
+        }
+      ],
+      "status": "ok",
+      "origin_count": 122,
+      "common_rows": 1056,
+      "included": [
+        "AutoETS",
+        "AutoTheta",
+        "RW",
+        "TimesFM3-raw"
+      ],
+      "excluded": [
+        "LightGBM"
+      ],
+      "pvalues": {
+        "LightGBM": 0.085,
+        "TimesFM3-raw": 0.558,
+        "AutoETS": 0.779,
+        "RW": 0.885,
+        "AutoTheta": 1.0
+      }
+    },
+    "h5": {
+      "mcs_universe": [
+        "AutoETS",
+        "AutoTheta",
+        "LightGBM",
+        "RW",
+        "TimesFM3-raw"
+      ],
+      "excluded_partial_coverage": [
+        {
+          "model": "TimesFM3-log",
+          "reason": "successful coverage missing for: JGB_10Y, JGB_2Y, JGB_5Y"
+        }
+      ],
+      "status": "ok",
+      "origin_count": 121,
+      "common_rows": 1049,
+      "included": [
+        "AutoETS",
+        "AutoTheta",
+        "LightGBM",
+        "RW",
+        "TimesFM3-raw"
+      ],
+      "excluded": [],
+      "pvalues": {
+        "LightGBM": 0.11,
+        "TimesFM3-raw": 0.253,
+        "AutoTheta": 0.345,
+        "AutoETS": 0.345,
+        "RW": 1.0
+      }
+    },
+    "h20": {
+      "mcs_universe": [
+        "AutoETS",
+        "AutoTheta",
+        "LightGBM",
+        "RW",
+        "TimesFM3-raw"
+      ],
+      "excluded_partial_coverage": [
+        {
+          "model": "TimesFM3-log",
+          "reason": "successful coverage missing for: JGB_10Y, JGB_2Y, JGB_5Y"
+        }
+      ],
+      "status": "ok",
+      "origin_count": 118,
+      "common_rows": 1023,
+      "included": [
+        "AutoETS",
+        "AutoTheta",
+        "RW",
+        "TimesFM3-raw"
+      ],
+      "excluded": [
+        "LightGBM"
+      ],
+      "pvalues": {
+        "LightGBM": 0.098,
+        "TimesFM3-raw": 0.315,
+        "AutoTheta": 0.431,
+        "AutoETS": 0.431,
+        "RW": 1.0
+      }
+    }
+  },
+  "calibration": {
+    "h1": {
+      "coverage": [
+        {
+          "model": "AutoETS",
+          "overall": 0.8596966413867823,
+          "low": 0.8896103896103896,
+          "middle": 0.8552845528455284,
+          "high": 0.8341463414634146,
+          "n_used": 1846,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "AutoTheta",
+          "overall": 0.8228602383531961,
+          "low": 0.9042207792207793,
+          "middle": 0.775609756097561,
+          "high": 0.7886178861788617,
+          "n_used": 1846,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "LightGBM",
+          "overall": 0.3712121212121212,
+          "low": 0.9346590909090909,
+          "middle": 0.17329545454545456,
+          "high": 0.005681818181818182,
+          "n_used": 1056,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "RW",
+          "overall": 0.742145178764897,
+          "low": 0.8392857142857143,
+          "middle": 0.6731707317073171,
+          "high": 0.7138211382113822,
+          "n_used": 1846,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "TimesFM3-log",
+          "overall": 0.7985028072364317,
+          "low": 0.8149532710280374,
+          "middle": 0.7902621722846442,
+          "high": 0.7902621722846442,
+          "n_used": 1603,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "TimesFM3-raw",
+          "overall": 0.8017334777898159,
+          "low": 0.8262987012987013,
+          "middle": 0.791869918699187,
+          "high": 0.7869918699186992,
+          "n_used": 1846,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        }
+      ],
+      "wql": [
+        {
+          "model": "AutoETS",
+          "wql": 0.013247447697472214,
+          "n_used": 1846
+        },
+        {
+          "model": "AutoTheta",
+          "wql": 0.013130558892614805,
+          "n_used": 1846
+        },
+        {
+          "model": "LightGBM",
+          "wql": 0.029237226685151083,
+          "n_used": 1056
+        },
+        {
+          "model": "RW",
+          "wql": 0.013411988260620143,
+          "n_used": 1846
+        },
+        {
+          "model": "TimesFM3-log",
+          "wql": 0.013089161415025934,
+          "n_used": 1603
+        },
+        {
+          "model": "TimesFM3-raw",
+          "wql": 0.013214418477614339,
+          "n_used": 1846
+        }
+      ],
+      "var_tests": []
+    },
+    "h5": {
+      "coverage": [
+        {
+          "model": "AutoETS",
+          "overall": 0.8576902025177887,
+          "low": 0.8916256157635468,
+          "middle": 0.8374384236453202,
+          "high": 0.8440065681444991,
+          "n_used": 1827,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "AutoTheta",
+          "overall": 0.8248494800218938,
+          "low": 0.8899835796387521,
+          "middle": 0.7619047619047619,
+          "high": 0.8226600985221675,
+          "n_used": 1827,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "LightGBM",
+          "overall": 0.3755958055290753,
+          "low": 0.94,
+          "middle": 0.17478510028653296,
+          "high": 0.011428571428571429,
+          "n_used": 1049,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "RW",
+          "overall": 0.7498631636562672,
+          "low": 0.8390804597701149,
+          "middle": 0.6502463054187192,
+          "high": 0.7602627257799671,
+          "n_used": 1827,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "TimesFM3-log",
+          "overall": 0.8197857592942659,
+          "low": 0.8355387523629489,
+          "middle": 0.7882797731568998,
+          "high": 0.8355387523629489,
+          "n_used": 1587,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "TimesFM3-raw",
+          "overall": 0.8188286808976464,
+          "low": 0.8440065681444991,
+          "middle": 0.7848932676518884,
+          "high": 0.8275862068965517,
+          "n_used": 1827,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        }
+      ],
+      "wql": [
+        {
+          "model": "AutoETS",
+          "wql": 0.0260969860777943,
+          "n_used": 1827
+        },
+        {
+          "model": "AutoTheta",
+          "wql": 0.025604552173976582,
+          "n_used": 1827
+        },
+        {
+          "model": "LightGBM",
+          "wql": 0.051784642478140595,
+          "n_used": 1049
+        },
+        {
+          "model": "RW",
+          "wql": 0.02585601474445274,
+          "n_used": 1827
+        },
+        {
+          "model": "TimesFM3-log",
+          "wql": 0.026216170853037523,
+          "n_used": 1587
+        },
+        {
+          "model": "TimesFM3-raw",
+          "wql": 0.026055515120607053,
+          "n_used": 1827
+        }
+      ],
+      "var_tests": []
+    },
+    "h20": {
+      "coverage": [
+        {
+          "model": "AutoETS",
+          "overall": 0.8384180790960452,
+          "low": 0.8898305084745762,
+          "middle": 0.7949152542372881,
+          "high": 0.8305084745762712,
+          "n_used": 1770,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "AutoTheta",
+          "overall": 0.7621468926553673,
+          "low": 0.8627118644067797,
+          "middle": 0.6813559322033899,
+          "high": 0.7423728813559322,
+          "n_used": 1770,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "LightGBM",
+          "overall": 0.35288367546432065,
+          "low": 0.9120234604105572,
+          "middle": 0.1466275659824047,
+          "high": 0.0,
+          "n_used": 1023,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "RW",
+          "overall": 0.7169491525423729,
+          "low": 0.8169491525423729,
+          "middle": 0.635593220338983,
+          "high": 0.6983050847457627,
+          "n_used": 1770,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "TimesFM3-log",
+          "overall": 0.8187134502923976,
+          "low": 0.8284600389863548,
+          "middle": 0.8089668615984406,
+          "high": 0.8187134502923976,
+          "n_used": 1539,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        },
+        {
+          "model": "TimesFM3-raw",
+          "overall": 0.8028248587570621,
+          "low": 0.8406779661016949,
+          "middle": 0.7711864406779662,
+          "high": 0.7966101694915254,
+          "n_used": 1770,
+          "tercile_shape": [
+            3,
+            3
+          ]
+        }
+      ],
+      "wql": [
+        {
+          "model": "AutoETS",
+          "wql": 0.056638498795911915,
+          "n_used": 1770
+        },
+        {
+          "model": "AutoTheta",
+          "wql": 0.05591763766167126,
+          "n_used": 1770
+        },
+        {
+          "model": "LightGBM",
+          "wql": 0.11260392418495423,
+          "n_used": 1023
+        },
+        {
+          "model": "RW",
+          "wql": 0.05690757655985581,
+          "n_used": 1770
+        },
+        {
+          "model": "TimesFM3-log",
+          "wql": 0.05732829825520447,
+          "n_used": 1539
+        },
+        {
+          "model": "TimesFM3-raw",
+          "wql": 0.056164128037646165,
+          "n_used": 1770
+        }
+      ],
+      "var_tests": []
+    }
+  },
+  "task_p": {
+    "tost": [
+      {
+        "h": 1,
+        "group": "fx",
+        "relative_mae": 1.0143353233218926,
+        "ci_low": 0.9830827783062474,
+        "ci_high": 1.047789155524445,
+        "pvalue": 0.031484257871064465,
+        "margin": 1.05,
+        "noninferior": true,
+        "n": 425,
+        "n_dropped": 0
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "relative_mae": 0.9981605538947816,
+        "ci_low": 0.9655460640050787,
+        "ci_high": 1.0342484805719068,
+        "pvalue": 0.006496751624187906,
+        "margin": 1.05,
+        "noninferior": true,
+        "n": 81,
+        "n_dropped": 0
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "relative_mae": 1.0141462768819611,
+        "ci_low": 0.992999907744452,
+        "ci_high": 1.0357054022774737,
+        "pvalue": 0.0034982508745627187,
+        "margin": 1.05,
+        "noninferior": true,
+        "n": 854,
+        "n_dropped": 0
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "relative_mae": 0.9501804268750228,
+        "ci_low": 0.9112852588370957,
+        "ci_high": 0.9885993394395699,
+        "pvalue": 0.0004997501249375312,
+        "margin": 1.05,
+        "noninferior": true,
+        "n": 420,
+        "n_dropped": 0
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "relative_mae": 1.031381899153963,
+        "ci_low": 0.9949092193730363,
+        "ci_high": 1.1017386795858255,
+        "pvalue": 0.1854072963518241,
+        "margin": 1.05,
+        "noninferior": false,
+        "n": 80,
+        "n_dropped": 0
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "relative_mae": 1.0257622607295775,
+        "ci_low": 1.002302070169349,
+        "ci_high": 1.0503214413827509,
+        "pvalue": 0.046476761619190406,
+        "margin": 1.05,
+        "noninferior": false,
+        "n": 847,
+        "n_dropped": 0
+      },
+      {
+        "h": 20,
+        "group": "fx",
+        "relative_mae": 0.9977609487008728,
+        "ci_low": 0.9419799045107925,
+        "ci_high": 1.0390395418066916,
+        "pvalue": 0.06646676661669165,
+        "margin": 1.05,
+        "noninferior": true,
+        "n": 405,
+        "n_dropped": 0
+      },
+      {
+        "h": 20,
+        "group": "equity",
+        "relative_mae": 1.0603948960448109,
+        "ci_low": 1.0048393801672786,
+        "ci_high": 1.1016688055278059,
+        "pvalue": 0.7906046976511744,
+        "margin": 1.05,
+        "noninferior": false,
+        "n": 77,
+        "n_dropped": 0
+      },
+      {
+        "h": 20,
+        "group": "crypto",
+        "relative_mae": 1.0148035967348572,
+        "ci_low": 0.9912000765915879,
+        "ci_high": 1.0436246512946383,
+        "pvalue": 0.009995002498750625,
+        "margin": 1.05,
+        "noninferior": true,
+        "n": 826,
+        "n_dropped": 0
+      }
+    ],
+    "jgb_dm": [
+      {
+        "h": 1,
+        "unique_id": "JGB_10Y",
+        "stat": 2.604961454928875,
+        "pvalue": 0.010952374193569822,
+        "nw_lag": 3,
+        "n": 81,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "unique_id": "JGB_20Y",
+        "stat": 3.272682969517091,
+        "pvalue": 0.0015741739510679953,
+        "nw_lag": 3,
+        "n": 81,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "unique_id": "JGB_2Y",
+        "stat": 1.7614659961421923,
+        "pvalue": 0.08198025180124824,
+        "nw_lag": 3,
+        "n": 81,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "unique_id": "JGB_30Y",
+        "stat": 0.11978074660336445,
+        "pvalue": 0.9049571318157825,
+        "nw_lag": 3,
+        "n": 81,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "unique_id": "JGB_40Y",
+        "stat": -0.28857524647090527,
+        "pvalue": 0.7736528400626678,
+        "nw_lag": 3,
+        "n": 81,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "unique_id": "JGB_5Y",
+        "stat": 1.3935517144839542,
+        "pvalue": 0.1673125214098286,
+        "nw_lag": 3,
+        "n": 81,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "unique_id": "JGB_10Y",
+        "stat": 0.9188491380922789,
+        "pvalue": 0.36097148878040003,
+        "nw_lag": 3,
+        "n": 80,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "unique_id": "JGB_20Y",
+        "stat": -0.2824749027282196,
+        "pvalue": 0.7783181515050878,
+        "nw_lag": 3,
+        "n": 80,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "unique_id": "JGB_2Y",
+        "stat": -0.49200998241032845,
+        "pvalue": 0.6240767275015275,
+        "nw_lag": 3,
+        "n": 80,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "unique_id": "JGB_30Y",
+        "stat": 0.4342507809163169,
+        "pvalue": 0.6652900841607219,
+        "nw_lag": 3,
+        "n": 80,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "unique_id": "JGB_40Y",
+        "stat": 1.1380059954748611,
+        "pvalue": 0.25855752838006174,
+        "nw_lag": 3,
+        "n": 80,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "unique_id": "JGB_5Y",
+        "stat": -0.1283688385177264,
+        "pvalue": 0.8981833221248603,
+        "nw_lag": 3,
+        "n": 80,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "unique_id": "JGB_10Y",
+        "stat": -2.6078465820635777,
+        "pvalue": 0.01096372834591904,
+        "nw_lag": 3,
+        "n": 77,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "unique_id": "JGB_20Y",
+        "stat": -2.2757643807068577,
+        "pvalue": 0.025677699262237813,
+        "nw_lag": 3,
+        "n": 77,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "unique_id": "JGB_2Y",
+        "stat": -1.3937871542842206,
+        "pvalue": 0.1674441298451794,
+        "nw_lag": 3,
+        "n": 77,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "unique_id": "JGB_30Y",
+        "stat": -2.4393738521650308,
+        "pvalue": 0.01704486045541459,
+        "nw_lag": 3,
+        "n": 77,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "unique_id": "JGB_40Y",
+        "stat": -1.7458753691066171,
+        "pvalue": 0.08487368299271382,
+        "nw_lag": 3,
+        "n": 77,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "unique_id": "JGB_5Y",
+        "stat": -2.1850950115852528,
+        "pvalue": 0.03196358068672007,
+        "nw_lag": 3,
+        "n": 77,
+        "reason": null
+      }
+    ],
+    "pesaran_timmermann": [
+      {
+        "h": 1,
+        "model": "AutoETS",
+        "group": "crypto",
+        "stat": 1.742803881128495,
+        "pvalue": 0.08136787815995737,
+        "n": 854,
+        "hit_rate": 0.5199063231850117,
+        "expected_hit_rate": 0.49104914742032263,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "AutoETS",
+        "group": "equity",
+        "stat": 0.3202693426525961,
+        "pvalue": 0.7487641611799405,
+        "n": 81,
+        "hit_rate": 0.5185185185185185,
+        "expected_hit_rate": 0.501143118427069,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "AutoETS",
+        "group": "fx",
+        "stat": -0.379926097652313,
+        "pvalue": 0.7040002742079969,
+        "n": 425,
+        "hit_rate": 0.49176470588235294,
+        "expected_hit_rate": 0.5009107266435986,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "AutoETS",
+        "group": "rates",
+        "stat": -1.5487594016072053,
+        "pvalue": 0.12143956834915688,
+        "n": 486,
+        "hit_rate": 0.5164609053497943,
+        "expected_hit_rate": 0.5384087791495199,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "AutoTheta",
+        "group": "crypto",
+        "stat": 2.2180993106498974,
+        "pvalue": 0.026548061819554148,
+        "n": 854,
+        "hit_rate": 0.5304449648711944,
+        "expected_hit_rate": 0.49324298383691023,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "AutoTheta",
+        "group": "equity",
+        "stat": 0.5796135138874773,
+        "pvalue": 0.562175277735985,
+        "n": 81,
+        "hit_rate": 0.5308641975308642,
+        "expected_hit_rate": 0.4991617131534827,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "AutoTheta",
+        "group": "fx",
+        "stat": -0.05257447518940167,
+        "pvalue": 0.9580709546839998,
+        "n": 425,
+        "hit_rate": 0.4988235294117647,
+        "expected_hit_rate": 0.5000968858131488,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "AutoTheta",
+        "group": "rates",
+        "stat": 0.5807197386338425,
+        "pvalue": 0.5614293562676509,
+        "n": 486,
+        "hit_rate": 0.5246913580246914,
+        "expected_hit_rate": 0.5119900421683686,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "LightGBM",
+        "group": "crypto",
+        "stat": 1.961430756830324,
+        "pvalue": 0.049828795053335075,
+        "n": 854,
+        "hit_rate": 0.5234192037470726,
+        "expected_hit_rate": 0.4909613939636591,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "LightGBM",
+        "group": "equity",
+        "stat": -0.6719368409052928,
+        "pvalue": 0.5016239054756698,
+        "n": 16,
+        "hit_rate": 0.4375,
+        "expected_hit_rate": 0.515625,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "LightGBM",
+        "group": "fx",
+        "stat": -0.17964422342208208,
+        "pvalue": 0.8574318841514567,
+        "n": 90,
+        "hit_rate": 0.4666666666666667,
+        "expected_hit_rate": 0.474320987654321,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "LightGBM",
+        "group": "rates",
+        "stat": 0.12077228664036058,
+        "pvalue": 0.9038714014545421,
+        "n": 96,
+        "hit_rate": 0.5104166666666666,
+        "expected_hit_rate": 0.5043402777777778,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "RW",
+        "group": "crypto",
+        "stat": null,
+        "pvalue": null,
+        "n": 854,
+        "hit_rate": 0.5374707259953162,
+        "expected_hit_rate": 0.5374707259953162,
+        "reason": "non-positive Pesaran-Timmermann variance"
+      },
+      {
+        "h": 1,
+        "model": "RW",
+        "group": "equity",
+        "stat": null,
+        "pvalue": null,
+        "n": 81,
+        "hit_rate": 0.5061728395061729,
+        "expected_hit_rate": 0.5061728395061729,
+        "reason": "non-positive Pesaran-Timmermann variance"
+      },
+      {
+        "h": 1,
+        "model": "RW",
+        "group": "fx",
+        "stat": null,
+        "pvalue": null,
+        "n": 425,
+        "hit_rate": 0.49176470588235294,
+        "expected_hit_rate": 0.491764705882353,
+        "reason": "non-positive Pesaran-Timmermann variance"
+      },
+      {
+        "h": 1,
+        "model": "RW",
+        "group": "rates",
+        "stat": null,
+        "pvalue": null,
+        "n": 486,
+        "hit_rate": 0.4506172839506173,
+        "expected_hit_rate": 0.4506172839506173,
+        "reason": "non-positive Pesaran-Timmermann variance"
+      },
+      {
+        "h": 1,
+        "model": "TimesFM3-log",
+        "group": "crypto",
+        "stat": -1.5930676595194568,
+        "pvalue": 0.11114501348160931,
+        "n": 854,
+        "hit_rate": 0.4882903981264637,
+        "expected_hit_rate": 0.5136017857828431,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "TimesFM3-log",
+        "group": "equity",
+        "stat": 1.5222537279552972,
+        "pvalue": 0.12794551739577775,
+        "n": 81,
+        "hit_rate": 0.5802469135802469,
+        "expected_hit_rate": 0.49855204999237923,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "TimesFM3-log",
+        "group": "fx",
+        "stat": 1.3895901341381378,
+        "pvalue": 0.16465337333576135,
+        "n": 425,
+        "hit_rate": 0.5270588235294118,
+        "expected_hit_rate": 0.49653148788927337,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "TimesFM3-log",
+        "group": "rates",
+        "stat": -1.3209277370003716,
+        "pvalue": 0.18652546027351213,
+        "n": 243,
+        "hit_rate": 0.45267489711934156,
+        "expected_hit_rate": 0.48630798150688415,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "TimesFM3-raw",
+        "group": "crypto",
+        "stat": -0.5155802533146084,
+        "pvalue": 0.6061476049218066,
+        "n": 854,
+        "hit_rate": 0.5152224824355972,
+        "expected_hit_rate": 0.5222893779925301,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "TimesFM3-raw",
+        "group": "equity",
+        "stat": 1.0197852452479217,
+        "pvalue": 0.30783032232779306,
+        "n": 81,
+        "hit_rate": 0.5555555555555556,
+        "expected_hit_rate": 0.4994665447340344,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "TimesFM3-raw",
+        "group": "fx",
+        "stat": 0.8991318163612849,
+        "pvalue": 0.36858245290726177,
+        "n": 425,
+        "hit_rate": 0.5152941176470588,
+        "expected_hit_rate": 0.49610519031141875,
+        "reason": null
+      },
+      {
+        "h": 1,
+        "model": "TimesFM3-raw",
+        "group": "rates",
+        "stat": -2.0988562296010196,
+        "pvalue": 0.03582957630430982,
+        "n": 486,
+        "hit_rate": 0.43209876543209874,
+        "expected_hit_rate": 0.4687039577300208,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "AutoETS",
+        "group": "crypto",
+        "stat": 0.5757123132186701,
+        "pvalue": 0.5648096511851833,
+        "n": 847,
+        "hit_rate": 0.4935064935064935,
+        "expected_hit_rate": 0.4840613931523023,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "AutoETS",
+        "group": "equity",
+        "stat": -1.0279471029329537e-15,
+        "pvalue": 0.9999999999999992,
+        "n": 80,
+        "hit_rate": 0.4875,
+        "expected_hit_rate": 0.48750000000000004,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "AutoETS",
+        "group": "fx",
+        "stat": 0.4021611471544129,
+        "pvalue": 0.6875654338985477,
+        "n": 420,
+        "hit_rate": 0.5142857142857142,
+        "expected_hit_rate": 0.5045918367346939,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "AutoETS",
+        "group": "rates",
+        "stat": -0.9670622610334928,
+        "pvalue": 0.3335129099565497,
+        "n": 480,
+        "hit_rate": 0.5583333333333333,
+        "expected_hit_rate": 0.5718055555555557,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "AutoTheta",
+        "group": "crypto",
+        "stat": -2.4681132639716212,
+        "pvalue": 0.013582733412419234,
+        "n": 847,
+        "hit_rate": 0.43919716646989376,
+        "expected_hit_rate": 0.4782655361167758,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "AutoTheta",
+        "group": "equity",
+        "stat": -1.4031446686804023,
+        "pvalue": 0.1605737033367688,
+        "n": 80,
+        "hit_rate": 0.4875,
+        "expected_hit_rate": 0.5525,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "AutoTheta",
+        "group": "fx",
+        "stat": 1.3303767384297411,
+        "pvalue": 0.18339417483274179,
+        "n": 420,
+        "hit_rate": 0.530952380952381,
+        "expected_hit_rate": 0.4986394557823129,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "AutoTheta",
+        "group": "rates",
+        "stat": -0.8193414619661465,
+        "pvalue": 0.41259162309107644,
+        "n": 480,
+        "hit_rate": 0.56875,
+        "expected_hit_rate": 0.578298611111111,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "LightGBM",
+        "group": "crypto",
+        "stat": -0.009459248385933617,
+        "pvalue": 0.9924527243079745,
+        "n": 847,
+        "hit_rate": 0.4817001180637544,
+        "expected_hit_rate": 0.48185344761495885,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "LightGBM",
+        "group": "equity",
+        "stat": 0.5204800389058843,
+        "pvalue": 0.6027290369331977,
+        "n": 16,
+        "hit_rate": 0.5625,
+        "expected_hit_rate": 0.5,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "LightGBM",
+        "group": "fx",
+        "stat": -2.970929766084671,
+        "pvalue": 0.0029689967112771793,
+        "n": 90,
+        "hit_rate": 0.3888888888888889,
+        "expected_hit_rate": 0.5133333333333333,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "LightGBM",
+        "group": "rates",
+        "stat": 1.4347358163866206,
+        "pvalue": 0.15136239382722677,
+        "n": 96,
+        "hit_rate": 0.6041666666666666,
+        "expected_hit_rate": 0.5366753472222222,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "RW",
+        "group": "crypto",
+        "stat": null,
+        "pvalue": null,
+        "n": 847,
+        "hit_rate": 0.5584415584415584,
+        "expected_hit_rate": 0.5584415584415585,
+        "reason": "non-positive Pesaran-Timmermann variance"
+      },
+      {
+        "h": 5,
+        "model": "RW",
+        "group": "equity",
+        "stat": null,
+        "pvalue": null,
+        "n": 80,
+        "hit_rate": 0.4,
+        "expected_hit_rate": 0.4,
+        "reason": "non-positive Pesaran-Timmermann variance"
+      },
+      {
+        "h": 5,
+        "model": "RW",
+        "group": "fx",
+        "stat": null,
+        "pvalue": null,
+        "n": 420,
+        "hit_rate": 0.4642857142857143,
+        "expected_hit_rate": 0.4642857142857143,
+        "reason": "non-positive Pesaran-Timmermann variance"
+      },
+      {
+        "h": 5,
+        "model": "RW",
+        "group": "rates",
+        "stat": null,
+        "pvalue": null,
+        "n": 480,
+        "hit_rate": 0.4083333333333333,
+        "expected_hit_rate": 0.4083333333333333,
+        "reason": "non-positive Pesaran-Timmermann variance"
+      },
+      {
+        "h": 5,
+        "model": "TimesFM3-log",
+        "group": "crypto",
+        "stat": -1.5345740396462035,
+        "pvalue": 0.12488849351569566,
+        "n": 847,
+        "hit_rate": 0.4923258559622196,
+        "expected_hit_rate": 0.5173185728085374,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "TimesFM3-log",
+        "group": "equity",
+        "stat": 0.09375732507716873,
+        "pvalue": 0.9253019319531406,
+        "n": 80,
+        "hit_rate": 0.525,
+        "expected_hit_rate": 0.52,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "TimesFM3-log",
+        "group": "fx",
+        "stat": 1.3215089262200368,
+        "pvalue": 0.18633172820756927,
+        "n": 420,
+        "hit_rate": 0.5190476190476191,
+        "expected_hit_rate": 0.48860544217687074,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "TimesFM3-log",
+        "group": "rates",
+        "stat": -1.2162610636688025,
+        "pvalue": 0.2238854887932732,
+        "n": 240,
+        "hit_rate": 0.4666666666666667,
+        "expected_hit_rate": 0.505,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "TimesFM3-raw",
+        "group": "crypto",
+        "stat": -0.6673594113550527,
+        "pvalue": 0.5045425854964632,
+        "n": 847,
+        "hit_rate": 0.5194805194805194,
+        "expected_hit_rate": 0.5293242766678423,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "TimesFM3-raw",
+        "group": "equity",
+        "stat": -0.09197808699150795,
+        "pvalue": 0.9267154498254486,
+        "n": 80,
+        "hit_rate": 0.5,
+        "expected_hit_rate": 0.505,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "TimesFM3-raw",
+        "group": "fx",
+        "stat": 0.845497409605439,
+        "pvalue": 0.3978331783611291,
+        "n": 420,
+        "hit_rate": 0.5047619047619047,
+        "expected_hit_rate": 0.4858843537414966,
+        "reason": null
+      },
+      {
+        "h": 5,
+        "model": "TimesFM3-raw",
+        "group": "rates",
+        "stat": -0.21668577797544528,
+        "pvalue": 0.8284532322246305,
+        "n": 480,
+        "hit_rate": 0.5166666666666667,
+        "expected_hit_rate": 0.5213888888888889,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "AutoETS",
+        "group": "crypto",
+        "stat": -0.4585429118511459,
+        "pvalue": 0.6465624402909166,
+        "n": 826,
+        "hit_rate": 0.47094430992736075,
+        "expected_hit_rate": 0.4785248198676195,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "AutoETS",
+        "group": "equity",
+        "stat": -1.2812106353558925,
+        "pvalue": 0.2001196915024075,
+        "n": 77,
+        "hit_rate": 0.4155844155844156,
+        "expected_hit_rate": 0.4817001180637544,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "AutoETS",
+        "group": "fx",
+        "stat": -0.8470972794624705,
+        "pvalue": 0.39694090139460525,
+        "n": 405,
+        "hit_rate": 0.48641975308641977,
+        "expected_hit_rate": 0.5071239140374942,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "AutoETS",
+        "group": "rates",
+        "stat": -0.4492329685345346,
+        "pvalue": 0.6532636070314422,
+        "n": 462,
+        "hit_rate": 0.7142857142857143,
+        "expected_hit_rate": 0.7197203950450703,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "AutoTheta",
+        "group": "crypto",
+        "stat": -3.3580934905812367,
+        "pvalue": 0.0007848206391929448,
+        "n": 826,
+        "hit_rate": 0.40314769975786924,
+        "expected_hit_rate": 0.44486102398442856,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "AutoTheta",
+        "group": "equity",
+        "stat": -1.1413986904345124,
+        "pvalue": 0.25370404941437685,
+        "n": 77,
+        "hit_rate": 0.6233766233766234,
+        "expected_hit_rate": 0.6594703997301399,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "AutoTheta",
+        "group": "fx",
+        "stat": 0.947382012921843,
+        "pvalue": 0.3434441533407363,
+        "n": 405,
+        "hit_rate": 0.5209876543209877,
+        "expected_hit_rate": 0.49762536198750196,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "AutoTheta",
+        "group": "rates",
+        "stat": null,
+        "pvalue": null,
+        "n": 462,
+        "hit_rate": 0.7835497835497836,
+        "expected_hit_rate": 0.7835497835497836,
+        "reason": "non-positive Pesaran-Timmermann variance"
+      },
+      {
+        "h": 20,
+        "model": "LightGBM",
+        "group": "crypto",
+        "stat": -2.2699420335920335,
+        "pvalue": 0.023211100324318924,
+        "n": 826,
+        "hit_rate": 0.42736077481840196,
+        "expected_hit_rate": 0.46149945183474134,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "LightGBM",
+        "group": "equity",
+        "stat": 0.14382930399215832,
+        "pvalue": 0.8856352622195232,
+        "n": 16,
+        "hit_rate": 0.5625,
+        "expected_hit_rate": 0.546875,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "LightGBM",
+        "group": "fx",
+        "stat": -1.4264347556368402,
+        "pvalue": 0.15374288735250466,
+        "n": 85,
+        "hit_rate": 0.47058823529411764,
+        "expected_hit_rate": 0.5317647058823529,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "LightGBM",
+        "group": "rates",
+        "stat": -1.85447886598053,
+        "pvalue": 0.06367068096820995,
+        "n": 96,
+        "hit_rate": 0.5416666666666666,
+        "expected_hit_rate": 0.6139322916666666,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "RW",
+        "group": "crypto",
+        "stat": 0.0,
+        "pvalue": 1.0,
+        "n": 826,
+        "hit_rate": 0.5799031476997578,
+        "expected_hit_rate": 0.5799031476997578,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "RW",
+        "group": "equity",
+        "stat": null,
+        "pvalue": null,
+        "n": 77,
+        "hit_rate": 0.2987012987012987,
+        "expected_hit_rate": 0.2987012987012987,
+        "reason": "non-positive Pesaran-Timmermann variance"
+      },
+      {
+        "h": 20,
+        "model": "RW",
+        "group": "fx",
+        "stat": null,
+        "pvalue": null,
+        "n": 405,
+        "hit_rate": 0.44938271604938274,
+        "expected_hit_rate": 0.44938271604938274,
+        "reason": "non-positive Pesaran-Timmermann variance"
+      },
+      {
+        "h": 20,
+        "model": "RW",
+        "group": "rates",
+        "stat": null,
+        "pvalue": null,
+        "n": 462,
+        "hit_rate": 0.21645021645021645,
+        "expected_hit_rate": 0.21645021645021645,
+        "reason": "non-positive Pesaran-Timmermann variance"
+      },
+      {
+        "h": 20,
+        "model": "TimesFM3-log",
+        "group": "crypto",
+        "stat": -0.6562361116365096,
+        "pvalue": 0.5116722173059096,
+        "n": 826,
+        "hit_rate": 0.49515738498789347,
+        "expected_hit_rate": 0.5063845130123293,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "TimesFM3-log",
+        "group": "equity",
+        "stat": -1.1282732544772374,
+        "pvalue": 0.2592045351015676,
+        "n": 77,
+        "hit_rate": 0.5454545454545454,
+        "expected_hit_rate": 0.5967279473772981,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "TimesFM3-log",
+        "group": "fx",
+        "stat": 0.6869819408697109,
+        "pvalue": 0.49209410870177617,
+        "n": 405,
+        "hit_rate": 0.4962962962962963,
+        "expected_hit_rate": 0.4806279530559366,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "TimesFM3-log",
+        "group": "rates",
+        "stat": -1.1032985885771645,
+        "pvalue": 0.26989751935526374,
+        "n": 231,
+        "hit_rate": 0.7532467532467533,
+        "expected_hit_rate": 0.7611926313225015,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "TimesFM3-raw",
+        "group": "crypto",
+        "stat": 2.53908436292092,
+        "pvalue": 0.01111430191785745,
+        "n": 826,
+        "hit_rate": 0.5714285714285714,
+        "expected_hit_rate": 0.5313421547877984,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "TimesFM3-raw",
+        "group": "equity",
+        "stat": -2.4598658604519037,
+        "pvalue": 0.013898895318537089,
+        "n": 77,
+        "hit_rate": 0.4025974025974026,
+        "expected_hit_rate": 0.5287569573283859,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "TimesFM3-raw",
+        "group": "fx",
+        "stat": 0.8160458573413045,
+        "pvalue": 0.4144739085076803,
+        "n": 405,
+        "hit_rate": 0.4962962962962963,
+        "expected_hit_rate": 0.47812833409541233,
+        "reason": null
+      },
+      {
+        "h": 20,
+        "model": "TimesFM3-raw",
+        "group": "rates",
+        "stat": -1.628099372724741,
+        "pvalue": 0.10350381654552787,
+        "n": 462,
+        "hit_rate": 0.7402597402597403,
+        "expected_hit_rate": 0.7540900657783776,
+        "reason": null
+      }
+    ]
+  },
+  "diagnostics": {
+    "half_split": [
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "AutoETS",
+        "win_rate": 0.42105263157894735,
+        "ratio_median": 1.0010061342110594,
+        "series_used": 19
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "AutoTheta",
+        "win_rate": 0.42105263157894735,
+        "ratio_median": 1.0016726053322058,
+        "series_used": 19
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "LightGBM",
+        "win_rate": 0.0,
+        "ratio_median": 43.86565122618922,
+        "series_used": 19
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "RW",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 19
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "TimesFM3-log",
+        "win_rate": 0.1875,
+        "ratio_median": 1.0250464744147643,
+        "series_used": 16
+      },
+      {
+        "h": 1,
+        "period": "first_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 0.21052631578947367,
+        "ratio_median": 1.0255460813808226,
+        "series_used": 19
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "AutoETS",
+        "win_rate": 0.47368421052631576,
+        "ratio_median": 1.0001333043999343,
+        "series_used": 19
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "AutoTheta",
+        "win_rate": 0.3157894736842105,
+        "ratio_median": 1.0100737178554913,
+        "series_used": 19
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "LightGBM",
+        "win_rate": 0.0,
+        "ratio_median": 28.636570134752635,
+        "series_used": 19
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "RW",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 19
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "TimesFM3-log",
+        "win_rate": 0.4375,
+        "ratio_median": 1.0076919117305536,
+        "series_used": 16
+      },
+      {
+        "h": 1,
+        "period": "second_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 0.3157894736842105,
+        "ratio_median": 1.006946088594391,
+        "series_used": 19
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "AutoETS",
+        "win_rate": 0.42105263157894735,
+        "ratio_median": 1.0001988829430832,
+        "series_used": 19
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "AutoTheta",
+        "win_rate": 0.5263157894736842,
+        "ratio_median": 0.9998912207098529,
+        "series_used": 19
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "LightGBM",
+        "win_rate": 0.0,
+        "ratio_median": 11.295542648005009,
+        "series_used": 19
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "RW",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 19
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "TimesFM3-log",
+        "win_rate": 0.1875,
+        "ratio_median": 1.0259377065195037,
+        "series_used": 16
+      },
+      {
+        "h": 5,
+        "period": "first_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 0.15789473684210525,
+        "ratio_median": 1.0269413482013705,
+        "series_used": 19
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "AutoETS",
+        "win_rate": 0.5263157894736842,
+        "ratio_median": 0.9999301070428096,
+        "series_used": 19
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "AutoTheta",
+        "win_rate": 0.3157894736842105,
+        "ratio_median": 1.0126730420817607,
+        "series_used": 19
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "LightGBM",
+        "win_rate": 0.0,
+        "ratio_median": 11.73373870937041,
+        "series_used": 19
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "RW",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 19
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "TimesFM3-log",
+        "win_rate": 0.375,
+        "ratio_median": 1.004656152226495,
+        "series_used": 16
+      },
+      {
+        "h": 5,
+        "period": "second_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 0.6842105263157895,
+        "ratio_median": 0.9927994221712642,
+        "series_used": 19
+      },
+      {
+        "h": 20,
+        "period": "first_half",
+        "model": "AutoETS",
+        "win_rate": 0.5789473684210527,
+        "ratio_median": 0.9996315554197339,
+        "series_used": 19
+      },
+      {
+        "h": 20,
+        "period": "first_half",
+        "model": "AutoTheta",
+        "win_rate": 0.47368421052631576,
+        "ratio_median": 1.0012039584936894,
+        "series_used": 19
+      },
+      {
+        "h": 20,
+        "period": "first_half",
+        "model": "LightGBM",
+        "win_rate": 0.0,
+        "ratio_median": 6.226133076073643,
+        "series_used": 19
+      },
+      {
+        "h": 20,
+        "period": "first_half",
+        "model": "RW",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 19
+      },
+      {
+        "h": 20,
+        "period": "first_half",
+        "model": "TimesFM3-log",
+        "win_rate": 0.375,
+        "ratio_median": 1.0055308339163256,
+        "series_used": 16
+      },
+      {
+        "h": 20,
+        "period": "first_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 0.631578947368421,
+        "ratio_median": 0.9932982219223319,
+        "series_used": 19
+      },
+      {
+        "h": 20,
+        "period": "second_half",
+        "model": "AutoETS",
+        "win_rate": 0.5263157894736842,
+        "ratio_median": 0.9996596992039785,
+        "series_used": 19
+      },
+      {
+        "h": 20,
+        "period": "second_half",
+        "model": "AutoTheta",
+        "win_rate": 0.47368421052631576,
+        "ratio_median": 1.000539352503211,
+        "series_used": 19
+      },
+      {
+        "h": 20,
+        "period": "second_half",
+        "model": "LightGBM",
+        "win_rate": 0.0,
+        "ratio_median": 8.820476431325234,
+        "series_used": 19
+      },
+      {
+        "h": 20,
+        "period": "second_half",
+        "model": "RW",
+        "win_rate": 0.0,
+        "ratio_median": 1.0,
+        "series_used": 19
+      },
+      {
+        "h": 20,
+        "period": "second_half",
+        "model": "TimesFM3-log",
+        "win_rate": 0.4375,
+        "ratio_median": 1.0067021577109645,
+        "series_used": 16
+      },
+      {
+        "h": 20,
+        "period": "second_half",
+        "model": "TimesFM3-raw",
+        "win_rate": 0.7368421052631579,
+        "ratio_median": 0.9821397625925969,
+        "series_used": 19
+      }
+    ],
+    "group_breakdown": [
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "AutoETS",
+        "ratio_median": 0.9986392009612483,
+        "ratio_mean": 0.9981501654283033,
+        "win_rate": 0.6,
+        "series_used": 5
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "AutoTheta",
+        "ratio_median": 1.004816802975301,
+        "ratio_mean": 1.0044362817694996,
+        "win_rate": 0.4,
+        "series_used": 5
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "LightGBM",
+        "ratio_median": 372.5091964214863,
+        "ratio_mean": 562.781275708592,
+        "win_rate": 0.0,
+        "series_used": 5
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 5
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "TimesFM3-log",
+        "ratio_median": 1.0145382156805558,
+        "ratio_mean": 1.020736929226398,
+        "win_rate": 0.2,
+        "series_used": 5
+      },
+      {
+        "h": 1,
+        "group": "fx",
+        "model": "TimesFM3-raw",
+        "ratio_median": 1.0140000444089952,
+        "ratio_mean": 1.0216606784688687,
+        "win_rate": 0.2,
+        "series_used": 5
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "AutoETS",
+        "ratio_median": 0.9961087531650237,
+        "ratio_mean": 0.997102916011155,
+        "win_rate": 0.6666666666666666,
+        "series_used": 6
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "AutoTheta",
+        "ratio_median": 1.0047125029511281,
+        "ratio_mean": 1.0073732218926201,
+        "win_rate": 0.5,
+        "series_used": 6
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "LightGBM",
+        "ratio_median": 35.870213785259814,
+        "ratio_mean": 38.81948174510934,
+        "win_rate": 0.0,
+        "series_used": 6
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 6
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "TimesFM3-log",
+        "ratio_median": 1.0542825725129603,
+        "ratio_mean": 1.053289331541148,
+        "win_rate": 0.0,
+        "series_used": 3
+      },
+      {
+        "h": 1,
+        "group": "rates",
+        "model": "TimesFM3-raw",
+        "ratio_median": 1.037399607937049,
+        "ratio_mean": 1.0285485498595015,
+        "win_rate": 0.16666666666666666,
+        "series_used": 6
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "AutoETS",
+        "ratio_median": 1.0008518832966664,
+        "ratio_mean": 1.0008518832966664,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "AutoTheta",
+        "ratio_median": 0.989879308343174,
+        "ratio_mean": 0.989879308343174,
+        "win_rate": 1.0,
+        "series_used": 1
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "LightGBM",
+        "ratio_median": 1.4542382924941848,
+        "ratio_mean": 1.4542382924941848,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "TimesFM3-log",
+        "ratio_median": 0.9964139181442766,
+        "ratio_mean": 0.9964139181442766,
+        "win_rate": 1.0,
+        "series_used": 1
+      },
+      {
+        "h": 1,
+        "group": "equity",
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.9981605538947816,
+        "ratio_mean": 0.9981605538947816,
+        "win_rate": 1.0,
+        "series_used": 1
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "AutoETS",
+        "ratio_median": 1.0029417021921618,
+        "ratio_mean": 1.0024997872674075,
+        "win_rate": 0.14285714285714285,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "AutoTheta",
+        "ratio_median": 0.9971910126382317,
+        "ratio_mean": 0.9984271708623833,
+        "win_rate": 0.5714285714285714,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "LightGBM",
+        "ratio_median": 1.6366889131137075,
+        "ratio_mean": 126.38401905056655,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "TimesFM3-log",
+        "ratio_median": 1.01524104752759,
+        "ratio_mean": 1.0163794498420997,
+        "win_rate": 0.14285714285714285,
+        "series_used": 7
+      },
+      {
+        "h": 1,
+        "group": "crypto",
+        "model": "TimesFM3-raw",
+        "ratio_median": 1.0104543448338754,
+        "ratio_mean": 1.0080750782696195,
+        "win_rate": 0.2857142857142857,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "AutoETS",
+        "ratio_median": 0.9978548873511082,
+        "ratio_mean": 0.9951318269419837,
+        "win_rate": 0.6,
+        "series_used": 5
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "AutoTheta",
+        "ratio_median": 0.9989312916986001,
+        "ratio_mean": 0.9955061273737236,
+        "win_rate": 0.6,
+        "series_used": 5
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "LightGBM",
+        "ratio_median": 407.84505931411553,
+        "ratio_mean": 393.54297284812094,
+        "win_rate": 0.0,
+        "series_used": 5
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 5
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "TimesFM3-log",
+        "ratio_median": 1.0154932127837497,
+        "ratio_mean": 1.0065930356862989,
+        "win_rate": 0.2,
+        "series_used": 5
+      },
+      {
+        "h": 5,
+        "group": "fx",
+        "model": "TimesFM3-raw",
+        "ratio_median": 1.0172517941940404,
+        "ratio_mean": 1.008542297448182,
+        "win_rate": 0.2,
+        "series_used": 5
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "AutoETS",
+        "ratio_median": 0.9915952162940347,
+        "ratio_mean": 0.9856283738948712,
+        "win_rate": 0.8333333333333334,
+        "series_used": 6
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "AutoTheta",
+        "ratio_median": 0.9966085045806266,
+        "ratio_mean": 0.9934626820444094,
+        "win_rate": 0.5,
+        "series_used": 6
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "LightGBM",
+        "ratio_median": 11.050411140371295,
+        "ratio_mean": 15.283174021532984,
+        "win_rate": 0.0,
+        "series_used": 6
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 6
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "TimesFM3-log",
+        "ratio_median": 1.0190650016943203,
+        "ratio_mean": 1.0163451272289115,
+        "win_rate": 0.0,
+        "series_used": 3
+      },
+      {
+        "h": 5,
+        "group": "rates",
+        "model": "TimesFM3-raw",
+        "ratio_median": 1.0020342074327084,
+        "ratio_mean": 1.004210241141134,
+        "win_rate": 0.5,
+        "series_used": 6
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "AutoETS",
+        "ratio_median": 1.0025239655838158,
+        "ratio_mean": 1.0025239655838158,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "AutoTheta",
+        "ratio_median": 0.9843362467678268,
+        "ratio_mean": 0.9843362467678268,
+        "win_rate": 1.0,
+        "series_used": 1
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "LightGBM",
+        "ratio_median": 1.339245817740438,
+        "ratio_mean": 1.339245817740438,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "TimesFM3-log",
+        "ratio_median": 1.0287705032243482,
+        "ratio_mean": 1.0287705032243482,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 5,
+        "group": "equity",
+        "model": "TimesFM3-raw",
+        "ratio_median": 1.031381899153963,
+        "ratio_mean": 1.031381899153963,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "AutoETS",
+        "ratio_median": 1.0056327377834633,
+        "ratio_mean": 1.0055220696093696,
+        "win_rate": 0.14285714285714285,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "AutoTheta",
+        "ratio_median": 1.011746113755844,
+        "ratio_mean": 1.011262542358052,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "LightGBM",
+        "ratio_median": 1.539962322245726,
+        "ratio_mean": 70.79808941679798,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "TimesFM3-log",
+        "ratio_median": 1.0183919692132966,
+        "ratio_mean": 1.0149495378356668,
+        "win_rate": 0.2857142857142857,
+        "series_used": 7
+      },
+      {
+        "h": 5,
+        "group": "crypto",
+        "model": "TimesFM3-raw",
+        "ratio_median": 1.0165219243883854,
+        "ratio_mean": 1.0083203556789446,
+        "win_rate": 0.2857142857142857,
+        "series_used": 7
+      },
+      {
+        "h": 20,
+        "group": "fx",
+        "model": "AutoETS",
+        "ratio_median": 1.000156895776134,
+        "ratio_mean": 1.0021581658308842,
+        "win_rate": 0.4,
+        "series_used": 5
+      },
+      {
+        "h": 20,
+        "group": "fx",
+        "model": "AutoTheta",
+        "ratio_median": 1.0070186634835594,
+        "ratio_mean": 0.9931480819666636,
+        "win_rate": 0.2,
+        "series_used": 5
+      },
+      {
+        "h": 20,
+        "group": "fx",
+        "model": "LightGBM",
+        "ratio_median": 147.74247013710766,
+        "ratio_mean": 199.9988179214974,
+        "win_rate": 0.0,
+        "series_used": 5
+      },
+      {
+        "h": 20,
+        "group": "fx",
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 5
+      },
+      {
+        "h": 20,
+        "group": "fx",
+        "model": "TimesFM3-log",
+        "ratio_median": 1.0062141386733452,
+        "ratio_mean": 1.0223341082646884,
+        "win_rate": 0.4,
+        "series_used": 5
+      },
+      {
+        "h": 20,
+        "group": "fx",
+        "model": "TimesFM3-raw",
+        "ratio_median": 1.0234479840441064,
+        "ratio_mean": 1.0211886175734888,
+        "win_rate": 0.4,
+        "series_used": 5
+      },
+      {
+        "h": 20,
+        "group": "rates",
+        "model": "AutoETS",
+        "ratio_median": 0.9125624270945341,
+        "ratio_mean": 0.916826491282711,
+        "win_rate": 1.0,
+        "series_used": 6
+      },
+      {
+        "h": 20,
+        "group": "rates",
+        "model": "AutoTheta",
+        "ratio_median": 0.9170238590704838,
+        "ratio_mean": 0.9210496802286157,
+        "win_rate": 1.0,
+        "series_used": 6
+      },
+      {
+        "h": 20,
+        "group": "rates",
+        "model": "LightGBM",
+        "ratio_median": 6.442120884244304,
+        "ratio_mean": 8.641589945551917,
+        "win_rate": 0.0,
+        "series_used": 6
+      },
+      {
+        "h": 20,
+        "group": "rates",
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 6
+      },
+      {
+        "h": 20,
+        "group": "rates",
+        "model": "TimesFM3-log",
+        "ratio_median": 0.9120117646666539,
+        "ratio_mean": 0.9150102153746258,
+        "win_rate": 1.0,
+        "series_used": 3
+      },
+      {
+        "h": 20,
+        "group": "rates",
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.9221378030053236,
+        "ratio_mean": 0.9268578436617413,
+        "win_rate": 1.0,
+        "series_used": 6
+      },
+      {
+        "h": 20,
+        "group": "equity",
+        "model": "AutoETS",
+        "ratio_median": 1.005966023670754,
+        "ratio_mean": 1.005966023670754,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 20,
+        "group": "equity",
+        "model": "AutoTheta",
+        "ratio_median": 0.9680933093713681,
+        "ratio_mean": 0.9680933093713681,
+        "win_rate": 1.0,
+        "series_used": 1
+      },
+      {
+        "h": 20,
+        "group": "equity",
+        "model": "LightGBM",
+        "ratio_median": 2.180846546623789,
+        "ratio_mean": 2.180846546623789,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 20,
+        "group": "equity",
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 20,
+        "group": "equity",
+        "model": "TimesFM3-log",
+        "ratio_median": 1.0381110579215824,
+        "ratio_mean": 1.0381110579215824,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 20,
+        "group": "equity",
+        "model": "TimesFM3-raw",
+        "ratio_median": 1.0603948960448109,
+        "ratio_mean": 1.0603948960448109,
+        "win_rate": 0.0,
+        "series_used": 1
+      },
+      {
+        "h": 20,
+        "group": "crypto",
+        "model": "AutoETS",
+        "ratio_median": 1.0039839195037503,
+        "ratio_mean": 1.0117080436520838,
+        "win_rate": 0.2857142857142857,
+        "series_used": 7
+      },
+      {
+        "h": 20,
+        "group": "crypto",
+        "model": "AutoTheta",
+        "ratio_median": 1.0199660498323533,
+        "ratio_mean": 1.0192568508461253,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 20,
+        "group": "crypto",
+        "model": "LightGBM",
+        "ratio_median": 1.5095165262099062,
+        "ratio_mean": 38.44844259595743,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 20,
+        "group": "crypto",
+        "model": "RW",
+        "ratio_median": 1.0,
+        "ratio_mean": 1.0,
+        "win_rate": 0.0,
+        "series_used": 7
+      },
+      {
+        "h": 20,
+        "group": "crypto",
+        "model": "TimesFM3-log",
+        "ratio_median": 1.0227551749132227,
+        "ratio_mean": 1.0184130715469848,
+        "win_rate": 0.14285714285714285,
+        "series_used": 7
+      },
+      {
+        "h": 20,
+        "group": "crypto",
+        "model": "TimesFM3-raw",
+        "ratio_median": 0.9960179550400315,
+        "ratio_mean": 0.9856314961300952,
+        "win_rate": 0.7142857142857143,
+        "series_used": 7
+      }
+    ],
+    "special_series": [
+      {
+        "h": 1,
+        "unique_id": "EURCNY",
+        "model": "AutoETS",
+        "ratio": 0.9949097035905681
+      },
+      {
+        "h": 1,
+        "unique_id": "EURCNY",
+        "model": "AutoTheta",
+        "ratio": 1.0000098189308826
+      },
+      {
+        "h": 1,
+        "unique_id": "EURCNY",
+        "model": "LightGBM",
+        "ratio": 9.236158180181897
+      },
+      {
+        "h": 1,
+        "unique_id": "EURCNY",
+        "model": "RW",
+        "ratio": 1.0
+      },
+      {
+        "h": 1,
+        "unique_id": "EURCNY",
+        "model": "TimesFM3-log",
+        "ratio": 1.0155028172612368
+      },
+      {
+        "h": 1,
+        "unique_id": "EURCNY",
+        "model": "TimesFM3-raw",
+        "ratio": 1.0186884831057295
+      },
+      {
+        "h": 1,
+        "unique_id": "EURKRW",
+        "model": "AutoETS",
+        "ratio": 1.0000729100834262
+      },
+      {
+        "h": 1,
+        "unique_id": "EURKRW",
+        "model": "AutoTheta",
+        "ratio": 1.0116311542502014
+      },
+      {
+        "h": 1,
+        "unique_id": "EURKRW",
+        "model": "LightGBM",
+        "ratio": 2.6989505346676537
+      },
+      {
+        "h": 1,
+        "unique_id": "EURKRW",
+        "model": "RW",
+        "ratio": 1.0
+      },
+      {
+        "h": 1,
+        "unique_id": "EURKRW",
+        "model": "TimesFM3-log",
+        "ratio": 1.0129766865318905
+      },
+      {
+        "h": 1,
+        "unique_id": "EURKRW",
+        "model": "TimesFM3-raw",
+        "ratio": 1.0199861962303436
+      },
+      {
+        "h": 1,
+        "unique_id": "EURMXN",
+        "model": "AutoETS",
+        "ratio": 1.007575906287721
+      },
+      {
+        "h": 1,
+        "unique_id": "EURMXN",
+        "model": "AutoTheta",
+        "ratio": 1.0136929950015887
+      },
+      {
+        "h": 1,
+        "unique_id": "EURMXN",
+        "model": "LightGBM",
+        "ratio": 5.1744627557842655
+      },
+      {
+        "h": 1,
+        "unique_id": "EURMXN",
+        "model": "RW",
+        "ratio": 1.0
+      },
+      {
+        "h": 1,
+        "unique_id": "EURMXN",
+        "model": "TimesFM3-log",
+        "ratio": 1.0010988524360682
+      },
+      {
+        "h": 1,
+        "unique_id": "EURMXN",
+        "model": "TimesFM3-raw",
+        "ratio": 1.0008382816803425
+      },
+      {
+        "h": 1,
+        "unique_id": "XRP-USD",
+        "model": "AutoETS",
+        "ratio": 1.0107894317062502
+      },
+      {
+        "h": 1,
+        "unique_id": "XRP-USD",
+        "model": "AutoTheta",
+        "ratio": 1.002432735123682
+      },
+      {
+        "h": 1,
+        "unique_id": "XRP-USD",
+        "model": "LightGBM",
+        "ratio": 40.72480168701215
+      },
+      {
+        "h": 1,
+        "unique_id": "XRP-USD",
+        "model": "RW",
+        "ratio": 1.0
+      },
+      {
+        "h": 1,
+        "unique_id": "XRP-USD",
+        "model": "TimesFM3-log",
+        "ratio": 1.0207646590159867
+      },
+      {
+        "h": 1,
+        "unique_id": "XRP-USD",
+        "model": "TimesFM3-raw",
+        "ratio": 1.024789565980442
+      },
+      {
+        "h": 5,
+        "unique_id": "EURCNY",
+        "model": "AutoETS",
+        "ratio": 1.0007269195139095
+      },
+      {
+        "h": 5,
+        "unique_id": "EURCNY",
+        "model": "AutoTheta",
+        "ratio": 1.0015792976194107
+      },
+      {
+        "h": 5,
+        "unique_id": "EURCNY",
+        "model": "LightGBM",
+        "ratio": 10.659823116711436
+      },
+      {
+        "h": 5,
+        "unique_id": "EURCNY",
+        "model": "RW",
+        "ratio": 1.0
+      },
+      {
+        "h": 5,
+        "unique_id": "EURCNY",
+        "model": "TimesFM3-log",
+        "ratio": 1.0293177603576513
+      },
+      {
+        "h": 5,
+        "unique_id": "EURCNY",
+        "model": "TimesFM3-raw",
+        "ratio": 1.029824346137573
+      },
+      {
+        "h": 5,
+        "unique_id": "EURKRW",
+        "model": "AutoETS",
+        "ratio": 1.0000535604584035
+      },
+      {
+        "h": 5,
+        "unique_id": "EURKRW",
+        "model": "AutoTheta",
+        "ratio": 1.0085668722948937
+      },
+      {
+        "h": 5,
+        "unique_id": "EURKRW",
+        "model": "LightGBM",
+        "ratio": 2.2101923015844402
+      },
+      {
+        "h": 5,
+        "unique_id": "EURKRW",
+        "model": "RW",
+        "ratio": 1.0
+      },
+      {
+        "h": 5,
+        "unique_id": "EURKRW",
+        "model": "TimesFM3-log",
+        "ratio": 1.036836134331361
+      },
+      {
+        "h": 5,
+        "unique_id": "EURKRW",
+        "model": "TimesFM3-raw",
+        "ratio": 1.0340339680865496
+      },
+      {
+        "h": 5,
+        "unique_id": "EURMXN",
+        "model": "AutoETS",
+        "ratio": 0.9919339240105057
+      },
+      {
+        "h": 5,
+        "unique_id": "EURMXN",
+        "model": "AutoTheta",
+        "ratio": 1.0007045964674552
+      },
+      {
+        "h": 5,
+        "unique_id": "EURMXN",
+        "model": "LightGBM",
+        "ratio": 4.072291992411643
+      },
+      {
+        "h": 5,
+        "unique_id": "EURMXN",
+        "model": "RW",
+        "ratio": 1.0
+      },
+      {
+        "h": 5,
+        "unique_id": "EURMXN",
+        "model": "TimesFM3-log",
+        "ratio": 1.0109946933015452
+      },
+      {
+        "h": 5,
+        "unique_id": "EURMXN",
+        "model": "TimesFM3-raw",
+        "ratio": 1.0111935980628117
+      },
+      {
+        "h": 5,
+        "unique_id": "XRP-USD",
+        "model": "AutoETS",
+        "ratio": 1.0709264329817727
+      },
+      {
+        "h": 5,
+        "unique_id": "XRP-USD",
+        "model": "AutoTheta",
+        "ratio": 1.0151934095203494
+      },
+      {
+        "h": 5,
+        "unique_id": "XRP-USD",
+        "model": "LightGBM",
+        "ratio": 24.029495282350247
+      },
+      {
+        "h": 5,
+        "unique_id": "XRP-USD",
+        "model": "RW",
+        "ratio": 1.0
+      },
+      {
+        "h": 5,
+        "unique_id": "XRP-USD",
+        "model": "TimesFM3-log",
+        "ratio": 0.9785468575654367
+      },
+      {
+        "h": 5,
+        "unique_id": "XRP-USD",
+        "model": "TimesFM3-raw",
+        "ratio": 0.9685013240834076
+      },
+      {
+        "h": 20,
+        "unique_id": "EURCNY",
+        "model": "AutoETS",
+        "ratio": 1.000508730985271
+      },
+      {
+        "h": 20,
+        "unique_id": "EURCNY",
+        "model": "AutoTheta",
+        "ratio": 1.0099708229175337
+      },
+      {
+        "h": 20,
+        "unique_id": "EURCNY",
+        "model": "LightGBM",
+        "ratio": 4.87349170312491
+      },
+      {
+        "h": 20,
+        "unique_id": "EURCNY",
+        "model": "RW",
+        "ratio": 1.0
+      },
+      {
+        "h": 20,
+        "unique_id": "EURCNY",
+        "model": "TimesFM3-log",
+        "ratio": 1.013335930309903
+      },
+      {
+        "h": 20,
+        "unique_id": "EURCNY",
+        "model": "TimesFM3-raw",
+        "ratio": 1.0127518436797678
+      },
+      {
+        "h": 20,
+        "unique_id": "EURKRW",
+        "model": "AutoETS",
+        "ratio": 1.0000237084148043
+      },
+      {
+        "h": 20,
+        "unique_id": "EURKRW",
+        "model": "AutoTheta",
+        "ratio": 0.9797816353473102
+      },
+      {
+        "h": 20,
+        "unique_id": "EURKRW",
+        "model": "LightGBM",
+        "ratio": 1.9261514238721844
+      },
+      {
+        "h": 20,
+        "unique_id": "EURKRW",
+        "model": "RW",
+        "ratio": 1.0
+      },
+      {
+        "h": 20,
+        "unique_id": "EURKRW",
+        "model": "TimesFM3-log",
+        "ratio": 1.0944309176310938
+      },
+      {
+        "h": 20,
+        "unique_id": "EURKRW",
+        "model": "TimesFM3-raw",
+        "ratio": 1.0757331509276904
+      },
+      {
+        "h": 20,
+        "unique_id": "EURMXN",
+        "model": "AutoETS",
+        "ratio": 0.9968663709987476
+      },
+      {
+        "h": 20,
+        "unique_id": "EURMXN",
+        "model": "AutoTheta",
+        "ratio": 0.995272439149537
+      },
+      {
+        "h": 20,
+        "unique_id": "EURMXN",
+        "model": "LightGBM",
+        "ratio": 2.3236151082994994
+      },
+      {
+        "h": 20,
+        "unique_id": "EURMXN",
+        "model": "RW",
+        "ratio": 1.0
+      },
+      {
+        "h": 20,
+        "unique_id": "EURMXN",
+        "model": "TimesFM3-log",
+        "ratio": 0.9996475181583654
+      },
+      {
+        "h": 20,
+        "unique_id": "EURMXN",
+        "model": "TimesFM3-raw",
+        "ratio": 0.9982233796004177
+      },
+      {
+        "h": 20,
+        "unique_id": "XRP-USD",
+        "model": "AutoETS",
+        "ratio": 1.1590090042101109
+      },
+      {
+        "h": 20,
+        "unique_id": "XRP-USD",
+        "model": "AutoTheta",
+        "ratio": 1.0606541118725217
+      },
+      {
+        "h": 20,
+        "unique_id": "XRP-USD",
+        "model": "LightGBM",
+        "ratio": 14.217689405772985
+      },
+      {
+        "h": 20,
+        "unique_id": "XRP-USD",
+        "model": "RW",
+        "ratio": 1.0
+      },
+      {
+        "h": 20,
+        "unique_id": "XRP-USD",
+        "model": "TimesFM3-log",
+        "ratio": 1.028573599441611
+      },
+      {
+        "h": 20,
+        "unique_id": "XRP-USD",
+        "model": "TimesFM3-raw",
+        "ratio": 0.9475733394538407
+      }
+    ],
+    "timesfm3_log_coverage": [
+      {
+        "h": 1,
+        "model": "TimesFM3-log",
+        "series_used": 16,
+        "other_model_max_series": 19,
+        "invalid_context_fail_count": 243,
+        "reason": "fail_reasons=invalid_context が 243 件。log 定義不能（非正値を含む金利系列等）のコンテキストは失敗会計となるため。"
+      },
+      {
+        "h": 5,
+        "model": "TimesFM3-log",
+        "series_used": 16,
+        "other_model_max_series": 19,
+        "invalid_context_fail_count": 240,
+        "reason": "fail_reasons=invalid_context が 240 件。log 定義不能（非正値を含む金利系列等）のコンテキストは失敗会計となるため。"
+      },
+      {
+        "h": 20,
+        "model": "TimesFM3-log",
+        "series_used": 16,
+        "other_model_max_series": 19,
+        "invalid_context_fail_count": 231,
+        "reason": "fail_reasons=invalid_context が 231 件。log 定義不能（非正値を含む金利系列等）のコンテキストは失敗会計となるため。"
+      }
+    ]
+  },
+  "reference_models": [],
+  "manifest": {
+    "status": "ok",
+    "expected": {
+      "AutoETS": 6554,
+      "AutoTheta": 6554,
+      "LightGBM": 6554,
+      "RW": 6554,
+      "TimesFM3-log": 6554,
+      "TimesFM3-raw": 6554
+    },
+    "actual": {
+      "AutoETS": 6554,
+      "AutoTheta": 6554,
+      "LightGBM": 6554,
+      "RW": 6554,
+      "TimesFM3-log": 6554,
+      "TimesFM3-raw": 6554
+    },
+    "rows": [
+      {
+        "model": "AutoETS",
+        "expected_rows": 6554,
+        "actual_rows": 6554,
+        "match": true
+      },
+      {
+        "model": "AutoTheta",
+        "expected_rows": 6554,
+        "actual_rows": 6554,
+        "match": true
+      },
+      {
+        "model": "LightGBM",
+        "expected_rows": 6554,
+        "actual_rows": 6554,
+        "match": true
+      },
+      {
+        "model": "RW",
+        "expected_rows": 6554,
+        "actual_rows": 6554,
+        "match": true
+      },
+      {
+        "model": "TimesFM3-log",
+        "expected_rows": 6554,
+        "actual_rows": 6554,
+        "match": true
+      },
+      {
+        "model": "TimesFM3-raw",
+        "expected_rows": 6554,
+        "actual_rows": 6554,
+        "match": true
+      }
+    ]
+  },
+  "plots": [
+    "plots/calibration.png",
+    "plots/primary_loss_difference.png"
+  ]
+}

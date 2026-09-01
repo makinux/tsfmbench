@@ -1,0 +1,28 @@
+version: 1
+task: rv
+label: V
+dev_end: 2024-12-31
+test_start: 2025-01-02
+test_end: 2026-08-31
+clean_start: 2026-09-01
+panel: rv_daily
+value_column: rv
+series: [RV_BTC, RV_ETH, RV_SOL, RV_XRP, RV_ADA, RV_DOGE, RV_LTC, RV_LINK, RV_N225_GK]
+horizons:
+  - {name: h1, h: 1, target: next, step: 1, probabilistic: true}
+  - {name: h5_sum, h: 5, target: sum, step: 5, probabilistic: true}
+  - {name: h22_sum, h: 22, target: sum, step: 22, probabilistic: false, quantiles_written_not_evaluated: true}
+sub_horizons:
+  h1: {h: 1, target: next, origin_step: 1, probabilistic: full}
+  h5_sum: {h: 5, target: nonoverlapping_sum, origin_step: 5, probabilistic: full}
+  h22_sum: {h: 22, target: nonoverlapping_sum, origin_step: 22, probabilistic: point_only, quantiles_written_not_evaluated: true}
+origin_schedule: {frequency: native}
+windows:
+  dev: {start: null, end: 2024-12-31}
+  main: {start: 2025-01-02, end: 2026-08-31}
+  clean: {start: 2026-09-01, end: null}
+primary_benchmark: EWMA
+refit_every: 5
+estimation_windows: {crypto: 1000, equity: 400, rv_crypto: 1000, rv_equity: 400}
+context_length: {default: 1024}
+positive_target: true

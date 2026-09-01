@@ -1,0 +1,358 @@
+{
+  "config_hashes": {
+    "AutoETS": "cc7a3e32de51",
+    "AutoTheta": "ceb08ea550ea",
+    "LightGBM": "4a9603f2ca68",
+    "Prophet": "d1932f58332b",
+    "SeasonalMedian4": "ba0ef6cb207b",
+    "SeasonalNaive7": "6f298f7bf6b9",
+    "TimesFM3-log": "ed3174a851b6",
+    "TimesFM3-raw": "ef597392107a"
+  },
+  "data_hash": "e82a4c91666582701d9851fd8b36a51cd51949d7d11e32b6ff2658849bce6681",
+  "models": {
+    "AutoETS": {
+      "class": "AutoETSAdapter",
+      "name": "AutoETS",
+      "reference": false,
+      "requires_fit": true
+    },
+    "AutoTheta": {
+      "class": "AutoThetaAdapter",
+      "name": "AutoTheta",
+      "reference": false,
+      "requires_fit": true
+    },
+    "LightGBM": {
+      "class": "LightGBMGlobal",
+      "levels": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "n_windows": 10,
+      "name": "LightGBM",
+      "params": {
+        "learning_rate": 0.05,
+        "min_child_samples": 20,
+        "n_estimators": 300,
+        "num_leaves": 31
+      },
+      "prediction_intervals_": {
+        "1": "PredictionIntervals(n_windows=10, h=1, method='conformal_distribution', scale_estimator=None)",
+        "5": "PredictionIntervals(n_windows=10, h=5, method='conformal_distribution', scale_estimator=None)"
+      },
+      "reference": false,
+      "requires_fit": true
+    },
+    "Prophet": {
+      "class": "Prophet",
+      "name": "Prophet",
+      "reference": true,
+      "requires_fit": true
+    },
+    "SeasonalMedian4": {
+      "class": "SeasonalMedian4",
+      "name": "SeasonalMedian4",
+      "reference": false,
+      "requires_fit": false
+    },
+    "SeasonalNaive7": {
+      "class": "SeasonalNaive7",
+      "name": "SeasonalNaive7",
+      "reference": false,
+      "requires_fit": false
+    },
+    "TimesFM3-log": {
+      "ForecastConfig": {
+        "fix_quantile_crossing": false,
+        "force_flip_invariance": true,
+        "infer_is_positive": true,
+        "max_context": 2048,
+        "max_horizon": 5,
+        "normalize_inputs": false,
+        "per_core_batch_size": 8,
+        "return_backcast": false,
+        "use_continuous_quantile_head": false,
+        "window_size": 0
+      },
+      "backend_config": {
+        "cache_dir": null,
+        "checkpoint_path": "google/timesfm-3.0-pytorch",
+        "device": "cuda",
+        "force_download": false,
+        "input_patch_length": 32,
+        "input_transform": "identity",
+        "linear_detrending_threshold": 0.5,
+        "local_files_only": true,
+        "median_quantile_index": 4,
+        "output_patch_length": 64,
+        "per_core_batch_size": 8,
+        "quantiles": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9
+        ],
+        "residual_block_config": {
+          "activation": "relu",
+          "dropout": 0.0,
+          "hidden_dims": 1280,
+          "identity_skip": false,
+          "output_dims": 1280,
+          "prenorm": "none",
+          "use_bias": false
+        },
+        "revision": null,
+        "token": null,
+        "transformer_config": {
+          "num_layers": 20,
+          "transformer": {
+            "attention_norm": "rms",
+            "causal_attention": true,
+            "debug_no_masking": false,
+            "deterministic": true,
+            "feedforward_norm": "rms",
+            "ff_activation": "relu",
+            "hidden_dims": 1280,
+            "max_variates": 32,
+            "model_dims": 1280,
+            "num_heads": 16,
+            "paired_token_skip_second": false,
+            "qk_norm": "rms",
+            "training": true,
+            "use_bias": false,
+            "use_memory_efficient_attention": true,
+            "use_rope_seq": true,
+            "use_rope_var": false,
+            "use_sdpa": true,
+            "v_norm": "none"
+          },
+          "use_remat": true
+        },
+        "use_frozen_running_stats": false,
+        "use_iterative_cpm_revin": true,
+        "use_linear_detrending": true,
+        "use_sdpa": true,
+        "use_stitching": true,
+        "use_variate_attention": true,
+        "value_clip": 1e+20
+      },
+      "checkpoint": "google/timesfm-3.0-pytorch",
+      "context_lengths": {
+        "VOL_Coinbase_ADA-USD_base": 1992,
+        "VOL_Coinbase_BTC-USD_base": 2048,
+        "VOL_Coinbase_DOGE-USD_base": 1915,
+        "VOL_Coinbase_ETH-USD_base": 2048,
+        "VOL_Coinbase_LINK-USD_base": 2048,
+        "VOL_Coinbase_LTC-USD_base": 2048,
+        "VOL_Coinbase_SOL-USD_base": 1901,
+        "VOL_Coinbase_XRP-USD_base": 1126
+      },
+      "device": "auto(cuda->cpu)",
+      "log_smearing": "model-implied quantile spread (fallback: dev-window diff-variance)",
+      "make_positive": false,
+      "model_variant": "TimesFM3-log",
+      "per_core_batch_size": 8,
+      "quantiles": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "resolved_commit_hash": "900fcab43d1bfe71733a33b3fec61a41fce28a27",
+      "return_quantiles": true,
+      "revision": null
+    },
+    "TimesFM3-raw": {
+      "ForecastConfig": {
+        "fix_quantile_crossing": false,
+        "force_flip_invariance": true,
+        "infer_is_positive": true,
+        "max_context": 2048,
+        "max_horizon": 5,
+        "normalize_inputs": false,
+        "per_core_batch_size": 8,
+        "return_backcast": false,
+        "use_continuous_quantile_head": false,
+        "window_size": 0
+      },
+      "backend_config": {
+        "cache_dir": null,
+        "checkpoint_path": "google/timesfm-3.0-pytorch",
+        "device": "cuda",
+        "force_download": false,
+        "input_patch_length": 32,
+        "input_transform": "identity",
+        "linear_detrending_threshold": 0.5,
+        "local_files_only": true,
+        "median_quantile_index": 4,
+        "output_patch_length": 64,
+        "per_core_batch_size": 8,
+        "quantiles": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9
+        ],
+        "residual_block_config": {
+          "activation": "relu",
+          "dropout": 0.0,
+          "hidden_dims": 1280,
+          "identity_skip": false,
+          "output_dims": 1280,
+          "prenorm": "none",
+          "use_bias": false
+        },
+        "revision": null,
+        "token": null,
+        "transformer_config": {
+          "num_layers": 20,
+          "transformer": {
+            "attention_norm": "rms",
+            "causal_attention": true,
+            "debug_no_masking": false,
+            "deterministic": true,
+            "feedforward_norm": "rms",
+            "ff_activation": "relu",
+            "hidden_dims": 1280,
+            "max_variates": 32,
+            "model_dims": 1280,
+            "num_heads": 16,
+            "paired_token_skip_second": false,
+            "qk_norm": "rms",
+            "training": true,
+            "use_bias": false,
+            "use_memory_efficient_attention": true,
+            "use_rope_seq": true,
+            "use_rope_var": false,
+            "use_sdpa": true,
+            "v_norm": "none"
+          },
+          "use_remat": true
+        },
+        "use_frozen_running_stats": false,
+        "use_iterative_cpm_revin": true,
+        "use_linear_detrending": true,
+        "use_sdpa": true,
+        "use_stitching": true,
+        "use_variate_attention": true,
+        "value_clip": 1e+20
+      },
+      "checkpoint": "google/timesfm-3.0-pytorch",
+      "context_lengths": {
+        "VOL_Coinbase_ADA-USD_base": 1992,
+        "VOL_Coinbase_BTC-USD_base": 2048,
+        "VOL_Coinbase_DOGE-USD_base": 1915,
+        "VOL_Coinbase_ETH-USD_base": 2048,
+        "VOL_Coinbase_LINK-USD_base": 2048,
+        "VOL_Coinbase_LTC-USD_base": 2048,
+        "VOL_Coinbase_SOL-USD_base": 1901,
+        "VOL_Coinbase_XRP-USD_base": 1126
+      },
+      "device": "auto(cuda->cpu)",
+      "make_positive": false,
+      "model_variant": "TimesFM3-raw",
+      "per_core_batch_size": 8,
+      "quantiles": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "resolved_commit_hash": "900fcab43d1bfe71733a33b3fec61a41fce28a27",
+      "return_quantiles": true,
+      "revision": null
+    }
+  },
+  "run_id": "volume-main-44c6d78ac972",
+  "task": "volume",
+  "task_config": {
+    "_panel_transformed": true,
+    "_source": "D:\\home\\TimesFM\\configs\\tasks\\volume.yaml",
+    "clean_start": "datetime.date(2026, 9, 1)",
+    "context_length": {
+      "default": 2048
+    },
+    "dev_end": "datetime.date(2024, 12, 31)",
+    "estimation_windows": {
+      "crypto": 1000,
+      "volume": 1000
+    },
+    "horizons": [
+      {
+        "h": 1,
+        "name": "h1",
+        "probabilistic": true,
+        "step": 5,
+        "target": "direct"
+      },
+      {
+        "h": 5,
+        "name": "h5",
+        "probabilistic": true,
+        "step": 5,
+        "target": "direct"
+      }
+    ],
+    "label": "U",
+    "origin_schedule": {
+      "frequency": "native",
+      "step": 5
+    },
+    "panel": "series",
+    "primary_benchmark": "SeasonalNaive7",
+    "refit_every": 5,
+    "series": [
+      "VOL_Coinbase_BTC-USD_base",
+      "VOL_Coinbase_ETH-USD_base",
+      "VOL_Coinbase_SOL-USD_base",
+      "VOL_Coinbase_XRP-USD_base",
+      "VOL_Coinbase_ADA-USD_base",
+      "VOL_Coinbase_DOGE-USD_base",
+      "VOL_Coinbase_LTC-USD_base",
+      "VOL_Coinbase_LINK-USD_base"
+    ],
+    "task": "volume",
+    "test_end": "datetime.date(2026, 8, 31)",
+    "test_start": "datetime.date(2025, 1, 2)",
+    "transform": "log1p",
+    "value_column": "y",
+    "version": 1,
+    "windows": {
+      "clean": {
+        "end": null,
+        "start": "datetime.date(2026, 9, 1)"
+      },
+      "dev": {
+        "end": "datetime.date(2024, 12, 31)",
+        "start": null
+      },
+      "main": {
+        "end": "datetime.date(2026, 8, 31)",
+        "start": "datetime.date(2025, 1, 2)"
+      }
+    }
+  }
+}

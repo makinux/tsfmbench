@@ -1,0 +1,29 @@
+# Python / uv
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# Data: raw files are never committed (Nikkei CSV is no-redistribution; model
+# weights are non-commercial-license and must not be redistributed)
+data/raw/
+data/processed/
+*.safetensors
+checkpoints/
+
+# Local caches
+.cache/
+.pytest_cache/
+.ruff_cache/
+.uv-cache/
+.tmp/
+.test-work/
+pytest-cache-files-*/
+
+# Results: forecasts.parquet can be large; metrics + summary ARE committed
+results/forecasts*.parquet
+
+# Contains verbatim rows of source data (Nikkei is no-redistribution)
+results/audit/random_samples.csv
