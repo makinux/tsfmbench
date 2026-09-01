@@ -1,5 +1,7 @@
 # PREREGISTRATION — TimesFM 3.0 金融実務ベンチマーク
 
+>（この日本語版が凍結された正本。英語の便宜訳: [PREREGISTRATION.en.md](PREREGISTRATION.en.md)）
+
 作成日: 2026-09-01（本番ラン実行前に凍結。以後の変更は追記のみ・変更理由必須）
 
 ## 1. 主張範囲（レポート第一文に転記する）

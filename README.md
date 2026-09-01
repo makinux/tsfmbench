@@ -1,31 +1,33 @@
-# tsfmbench — TimesFM 3.0 金融実務ベンチマーク
+English | [日本語](README.ja.md)
 
-TimesFM 3.0（zero-shot 時系列基盤モデル）を、公式評価（GIFT-Eval / fev-bench / TIME）と重複しない金融市場データ上で、実務ベースライン（RW / EWMA / GARCH系 / HAR-RV / DVOL回帰 / LightGBM / 統計モデル）と比較する。設計は多モデル敵対的レビュー（Codex gpt-5.6 × Claude Opus、2ラウンド）を経て確定し、[PREREGISTRATION.md](PREREGISTRATION.md) に凍結されている。
+# tsfmbench — a financial-practice benchmark for TimesFM 3.0
 
-**主張範囲**: 本ベンチが判定するのは「TimesFM 3.0 の指定構成が本パネルのベースラインに勝つか」のみ。TSFM 一般や商用導入可否（重みは非商用ライセンス）には及ばない。メイン窓（2025-01〜2026-08）はモデルの学習データに含まれる可能性があり、**勝ちは能力の証拠として報告しない**（負けと clean window のみ強い情報）。
+Benchmarks TimesFM 3.0 (Google's zero-shot time-series foundation model) against the baselines practitioners actually use — Random Walk, EWMA, GARCH/GJR, HAR-RV, implied-volatility (DVOL) regression, LightGBM, AutoETS/Theta — on financial market data deliberately disjoint from the official evaluations (GIFT-Eval / fev-bench / TIME). The design went through two rounds of adversarial review by an independent model panel (Codex gpt-5.6 × Claude Opus) and is frozen in [PREREGISTRATION.md](PREREGISTRATION.md) ([English translation](PREREGISTRATION.en.md)).
 
-## タスク
+**Scope of claims**: this benchmark decides one question only — whether the specified TimesFM 3.0 configuration beats this panel of practical baselines. It says nothing about time-series foundation models in general, nor about production adoption (the weights are under a non-commercial license). The main test window (2025-01 to 2026-08) may overlap TimesFM's training data, so **wins are not reported as evidence of capability** — only losses, calibration quality, and the clean window carry strong information.
 
-| タスク | 対象 | 基準 | 主損失 |
+## Tasks
+
+| Task | Universe | Benchmark | Primary loss |
 |---|---|---|---|
-| P 価格 | FX 8 EURレッグ・JGB 6年限・日経225・暗号8 | RandomWalk | 対RW相対MAE（TOST非劣性） |
-| V 実現ボラ | 暗号8×5分足RV・日経GK | EWMA(0.94) | QLIKE（対基準比のみ集計） |
-| U 出来高 | Coinbase base volume 8 | SeasonalNaive(7) | 対基準相対MAE |
+| P — price levels | 8 ECB EUR legs, 6 JGB tenors, Nikkei 225, 8 crypto | Random Walk | MAE ratio vs RW (TOST non-inferiority) |
+| V — realized volatility | 8 crypto (5-min RV), Nikkei (Garman-Klass) | EWMA(0.94) | QLIKE (aggregated only as ratio-to-benchmark) |
+| U — volume | 8 Coinbase base-volume series | SeasonalNaive(7) | relative MAE vs benchmark |
 
-## 実行
+## Running it
 
 ```powershell
 uv sync --all-extras
-uv run tsfmbench probe                     # データソース到達性
-uv run tsfmbench download                  # 全ソース取得（--update で差分）
-uv run tsfmbench build                     # 正規化 parquet
-uv run tsfmbench audit                     # データ監査（違反で exit 1）
-uv run tsfmbench mde                       # 実行前検出力レポート
+uv run tsfmbench probe                     # data-source reachability
+uv run tsfmbench download                  # fetch all sources (--update for increments)
+uv run tsfmbench build                     # normalized parquet
+uv run tsfmbench audit                     # data audits (exit 1 on violations)
+uv run tsfmbench mde                       # pre-run minimum-detectable-effect report
 uv run tsfmbench run --task rv --window main
 uv run tsfmbench report --task rv --window main
 ```
 
-## 月次 clean-window 追試（汚染フリー評価、初回の意味ある読みは 2026-12 頃）
+## Monthly clean-window reruns (contamination-free evaluation; first meaningful read around 2026-12)
 
 ```powershell
 uv run tsfmbench download --update
@@ -37,13 +39,13 @@ uv run tsfmbench run --task volume --window clean
 uv run tsfmbench report --task rv --window clean
 ```
 
-## Windows + プロキシ環境での注意
+## Notes for Windows + proxy environments
 
-- uv 標準の python-build-standalone は、TLS 検査型プロキシ配下の Windows で `OPENSSL_Uplink: no OPENSSL_Applink` クラッシュを起こすことがある → python.org ビルドの 3.12 を使用（pyproject の `python-preference = "only-system"`）
-- TLS 検査プロキシ配下では `system-certs = true`（uv）+ 実行時 `truststore` で OS の証明書ストアを信頼させる
-- HF チェックポイントは `HF_HUB_OFFLINE=1` でキャッシュからロード（DL は torch 非依存プロセスで）
-- 日経 raw CSV とモデル重みは再配布不可（git 外）
+- uv's default python-build-standalone interpreters can hard-crash on TLS (`OPENSSL_Uplink: no OPENSSL_Applink`) on Windows behind TLS-inspecting proxies → this project pins the python.org 3.12 build (`python-preference = "only-system"` in pyproject)
+- Behind a TLS-inspecting proxy, set `system-certs = true` (uv) and rely on runtime `truststore` so the OS certificate store is trusted
+- The HF checkpoint is loaded from cache with `HF_HUB_OFFLINE=1` (download it in a torch-free process first)
+- Raw Nikkei CSV and the model weights must not be redistributed (both are kept out of git)
 
-## 実装
+## Implementation
 
-コード生成は Codex (gpt-5.6) に委譲し、Claude (Fable 5) が仕様策定・レビュー・実行・検証を担当。設計の凍結内容と逸脱記録は [PREREGISTRATION.md](PREREGISTRATION.md)、経緯の読み物は [blog/](blog/timesfm3-finance-bench.md) を参照。テスト: `uv run pytest -q`（79 + slow 1）。
+Code generation was delegated to Codex (gpt-5.6); Claude (Fable 5) wrote the specifications and did review, execution, and verification. The frozen design and its deviation log live in [PREREGISTRATION.md](PREREGISTRATION.md); the narrative write-up is in [blog/](blog/timesfm3-finance-bench.md) (Japanese). Tests: `uv run pytest -q` (79 + 1 slow).
